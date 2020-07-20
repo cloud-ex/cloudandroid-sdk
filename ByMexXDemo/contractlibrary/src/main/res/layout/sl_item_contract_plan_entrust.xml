@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/contract_order_card_bg"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+    <!--开多 开空-->
+    <TextView
+        android:background="@drawable/contract_side_label_red_bg"
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_buy_up"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv_contract_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            tools:text="BCHUSDT永续"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <!--仓位杠杆-->
+        <TextView
+            android:id="@+id/tv_lever"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_contract_name"
+            app:layout_constraintLeft_toRightOf="@id/tv_contract_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100X"
+            android:background="@drawable/contract_hold_lever_bg"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_s"
+            />
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_contract_name"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="--"
+            tools:text="2019/01/16 15:00:23"
+            android:textColor="@color/normal_text_color"
+            android:textSize="12sp" />
+        <TextView
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_yellow"
+            android:background="@drawable/btn_cancel_bg"
+            android:textSize="12sp"
+            android:text="@string/str_cancel_order"
+            tools:visibility="visible"
+            tools:text="撤销"/>
+
+        <!--委托状态-->
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp"
+            tools:visibility="visible"
+            tools:text="触发失败"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--触发价格-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_trigger_price"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_trigger_price"/>
+
+        <!--执行价格 (BTC)-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/item_execution_price"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_execution_price"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--执行数量 (张)-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_execution_volume"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_execution_volume"/>
+
+        <!-- 到期时间-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/item_deadline_time"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_deadline_time"
+            />
+    </LinearLayout>
+
+    <!-- 华丽的分割线-->
+    <View
+        android:id="@+id/view_dash"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dash_line_bg"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <!-- 到期时间-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_deadline_time"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_deadline_time"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_deadline_time"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="2020/03/10 15:23"
+                />
+        </LinearLayout>
+        <!-- 触发时间-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_trigger_time"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_trigger_time"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_deadline_time"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="2020/03/10 15:23"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

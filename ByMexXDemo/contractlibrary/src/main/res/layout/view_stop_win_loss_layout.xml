@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:animateLayoutChanges="true"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+   >
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_mode_normal"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:text="止盈"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size" />
+
+
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:layout_marginLeft="14dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--触发价格-->
+        <com.sl.ui.library.widget.CommonBorderInputLayout
+            android:id="@+id/et_trigger_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputHint="@string/str_input_trigger_price_hint"
+            app:inputHelperHint=""
+            app:rightText="" />
+
+        <!--执行价格-->
+        <com.sl.ui.library.widget.CommonBorderInputLayout
+            android:visibility="gone"
+            tool:visibility="visible"
+            android:layout_marginTop="15dp"
+            android:id="@+id/et_ex_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputHint="@string/str_input_ex_price_hint"
+            app:inputHelperHint="预计损失 -0.00USDT    回报率 - 0.00%"
+            app:rightTextColor="@color/main_yellow"
+            app:rightText="@string/str_market_price" />
+
+    </LinearLayout>
+
+</LinearLayout>

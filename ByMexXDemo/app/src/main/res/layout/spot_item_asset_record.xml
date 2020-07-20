@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/tv_coin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BTC"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size"
+        />
+
+    <!--权益-->
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_total_asset"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_normal_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+        </LinearLayout>
+        <!--冻结-->
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_asset_freeze"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_freeze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+        </LinearLayout>
+
+
+        <!--可用-->
+        <LinearLayout
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_assets_available"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <View
+        style="@style/common_horizon_line_style"
+        android:layout_marginTop="16dp"
+       />
+</LinearLayout>

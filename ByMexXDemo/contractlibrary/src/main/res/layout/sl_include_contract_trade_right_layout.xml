@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="22dp"
+    >
+
+    <RelativeLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--最新成交价-->
+        <TextView
+            android:id="@+id/tv_last_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/main_green"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="42.9009" />
+        <!--百分比-->
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sl_border_green_fill"
+            android:padding="2dp"
+            android:text="0.00%"
+            android:textColor="@color/main_green"
+            android:textSize="@dimen/font_size_s"
+            tools:text="0.00%" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <!--指数价格-->
+        <TextView
+            android:id="@+id/tv_index_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_index_price_tag"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:text="0.00"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="42.9009" />
+        <!--合理价格-->
+        <TextView
+            android:id="@+id/tv_fair_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_fair_price_tag"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:text="0.00"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            tools:text="0.00" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <!--价格-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_price"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+        <!--数量-->
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/str_amount"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+    </RelativeLayout>
+    <!--卖盘-->
+    <com.sl.contract.library.widget.DeepTreadDiskWidget
+        android:id="@+id/ll_sell_Layout"
+        android:layout_marginTop="12dp"
+        android:tag="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--买盘-->
+    <com.sl.contract.library.widget.DeepTreadDiskWidget
+        android:id="@+id/ll_buy_layout"
+        android:layout_marginTop="10dp"
+        android:tag="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--资金费率-->
+    <RelativeLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+        <TextView
+            android:id="@+id/iv_funds_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_funds_rate"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+        <TextView
+            android:id="@+id/iv_funds_rate_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="--"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m" />
+    </RelativeLayout>
+
+</LinearLayout>

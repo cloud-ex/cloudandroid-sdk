@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_item_warp_layout"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/contract_order_card_bg"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tv_position_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contract_side_label_red_bg"
+        android:text="多头"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_m" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!--币种名称-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTCUSDT"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--杠杆-->
+        <TextView
+            android:id="@+id/tv_lever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/contract_hold_lever_bg"
+            android:text="100X"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_s"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_name"
+            app:layout_constraintLeft_toRightOf="@id/tv_name"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <!--持仓均价-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_hold_px"
+            app:sl_itemTitle="@string/str_cost_price"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <!--强平价格-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_liq_price"
+            app:sl_itemTitle="@string/str_liq_price"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <!--未实现盈亏-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_unrealised_pnl"
+            app:sl_itemTitle="@string/str_unrealised_pnl"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+        <!--回报率-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_floating_gains"
+            app:contentTextColor="@color/main_green"
+            android:layout_marginLeft="25dp"
+            app:sl_itemTitle="@string/str_floating_gains"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

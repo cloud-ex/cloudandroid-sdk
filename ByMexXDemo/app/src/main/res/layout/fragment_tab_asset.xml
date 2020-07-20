@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:text="@string/str_asset_pre"
+        android:textSize="@dimen/font_size_xl"
+        android:textColor="@color/text_color"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_asset_eye"
+                android:paddingLeft="17dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/icon_eye_open"
+                android:drawablePadding="4dp"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="@color/normal_text_color"
+                android:text="@string/str_total_asset_conversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:paddingLeft="17dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_total_asset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 BTC"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_total_asset_cny"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="≈ 0.00 CNY"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <!--充值-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_deposit_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_home_deposit" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_deposit"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+                <!--提现-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_withdraw_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_withdraw" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_withdraw"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+                <!--资金划转-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_transfer_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_home_transfer" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_funds_transfer"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+
+                <!--资金流水-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_asset_flow_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_asset_flow" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_asset_flow"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+
+            </LinearLayout>
+
+            <!--账户-->
+            <LinearLayout
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_contract_account"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/account_bg_selector"
+                android:layout_weight="1"
+                android:layout_marginRight="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/icon_contract_account"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_contract_account"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/font_size_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_contract_balance"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 BTC"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_contract_balance_cny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="≈ 0.00 CNY"
+                    android:textColor="@color/hint_color"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_spot_account"
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/account_bg_selector"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/icon_spot_account"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"/>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_wallet_account"
+                        android:textColor="@color/normal_text_color"
+                        android:textSize="@dimen/font_size_normal"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_spot_balance"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00 BTC"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_spot_balance_cny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="≈ 0.00 CNY"
+                        android:textColor="@color/hint_color"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--资产-->
+            <FrameLayout
+                android:id="@+id/fl_asset_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

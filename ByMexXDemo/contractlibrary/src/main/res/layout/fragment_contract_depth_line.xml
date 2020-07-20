@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--图例-->
+        <LinearLayout
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:background="@drawable/border_depth_buy_label_bg"
+                android:layout_width="10dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_buy_dish"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <View
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/border_depth_sell_label_bg"
+                android:layout_width="10dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_sell_dish"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+        </LinearLayout>
+
+        <!--深度图-->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/depth_chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_buy_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="buy" />
+
+            <TextView
+                android:id="@+id/tv_close_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="buy" />
+
+            <TextView
+                android:id="@+id/tv_sell_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="buy" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

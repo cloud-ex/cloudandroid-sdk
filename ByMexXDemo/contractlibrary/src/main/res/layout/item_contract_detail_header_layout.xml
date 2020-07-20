@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_header_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_time"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        tools:text="时间" />
+
+    <TextView
+        android:paddingLeft="80dp"
+        android:gravity="left"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_header_center"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        tools:text="中间" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_header_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+         />
+
+</RelativeLayout>
+

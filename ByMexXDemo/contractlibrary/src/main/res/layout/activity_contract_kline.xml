@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_right_icon="@drawable/icon_landscape"
+        app:bar_title="" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <com.sl.ui.library.widget.material.MaterialTextView
+            android:id="@+id/tv_open_long"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size"
+            android:gravity="center"
+            android:background="@color/main_green"
+            android:layout_weight="1"
+            android:text="@string/str_buy_up"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <com.sl.ui.library.widget.material.MaterialTextView
+            android:id="@+id/tv_open_short"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size"
+            android:gravity="center"
+            android:background="@color/main_red"
+            android:layout_weight="1"
+            android:text="@string/str_buy_down"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_above="@id/ll_bottom_layout"
+        android:layout_below="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+      >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--最新价格-->
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/tv_last_price"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/main_green"
+                            android:textSize="@dimen/font_size_xxl"
+                            />
+                        <!--usd/CNY-->
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:id="@+id/tv_usd_price"
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_last_price"
+                            app:layout_constraintLeft_toRightOf="@id/tv_last_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="≈¥0.00"
+                            android:textColor="@color/hint_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                        <!--最高价-->
+                        <TextView
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_usd_price"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="--"
+                            android:gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/tv_high_px"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            tools:text="6780"
+                            />
+
+                        <!--最高价label-->
+                        <TextView
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_high_px"
+                            app:layout_constraintRight_toLeftOf="@id/tv_high_px"
+                            android:text="@string/str_high_px_label"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/tv_high_px_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/hint_color"
+                            android:textSize="12sp"
+                            />
+
+
+                        <!--最低价-->
+                        <TextView
+                            android:gravity="right"
+                            android:text="--"
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_rose_rate"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:id="@+id/tv_low_px"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            tools:text="6780"
+                            />
+                        <!--最低价label-->
+                        <TextView
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_low_px"
+                            android:text="@string/str_low_px_label"
+                            app:layout_constraintRight_toLeftOf="@id/tv_low_px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/hint_color"
+                            android:textSize="12sp"
+                            />
+
+
+                        <!--24小时量值-->
+                        <TextView
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_index_price"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:id="@+id/tv_24h_vol"
+                            android:layout_width="100dp"
+                            android:gravity="right"
+                            android:text="--"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            tools:text="78990M" />
+                        <!--24小时量label-->
+                        <TextView
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_24h_vol"
+                            app:layout_constraintRight_toLeftOf="@id/tv_24h_vol"
+                            android:id="@+id/tv_24h_vol_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/hint_color"
+                            android:text="@string/str_24h_vol"
+                            android:textSize="@dimen/font_size_m"
+                            />
+
+
+                        <!--涨跌幅-->
+                        <TextView
+                            app:layout_constraintTop_toBottomOf="@id/tv_last_price"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginTop="8dp"
+                            android:paddingBottom="2dp"
+                            android:paddingRight="4dp"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="2dp"
+                            android:background="@drawable/sl_border_green_fill"
+                            android:id="@+id/tv_rose_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/main_green"
+                            android:textSize="12sp"
+                            tools:text="+1.88%" />
+
+
+                        <!--合理价格-->
+                        <TextView
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@id/tv_rose_rate"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:id="@+id/tv_fair_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_fair_price_tag"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="0.00"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_m"
+                            tools:text="0.00" />
+
+                        <!--指数价格-->
+                        <TextView
+                            android:layout_marginLeft="15dp"
+                            app:layout_constraintBaseline_toBaselineOf="@id/tv_fair_price"
+                            app:layout_constraintLeft_toRightOf="@id/tv_fair_price"
+                            android:id="@+id/tv_index_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/icon_index_price_tag"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="0.00"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_m"
+                            tools:text="42.9009" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!--K线-->
+                    <com.sl.contract.library.widget.ContractKLineWidget
+                        android:id="@+id/kline_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"/>
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!--盘口/深度/成交-->
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                app:tl_indicator_anim_enable="true"
+                app:tl_indicator_bounce_enable="false"
+                app:tl_indicator_color="@color/line_focus_color"
+                app:tl_indicator_corner_radius="2dp"
+                app:tl_indicator_height="2dp"
+                app:tl_tab_space_equal="true"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_textSelectColor="@color/text_color"
+                app:tl_textUnselectColor="@color/hint_color"
+                app:tl_textsize="@dimen/font_size_normal" />
+            <View
+                style="@style/common_horizon_line_style"
+                android:layout_width="match_parent"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:ignore="MissingDefaultResource">
+
+    <!--24H行情-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_layout"
+        android:paddingLeft="15dp"
+        android:paddingRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <!--币种名称-->
+        <TextView
+            android:id="@+id/tv_coin_name"
+            tools:text="BTCUSDT"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/text_color"
+            android:text="--"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <!--最新价格-->
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_last_price"
+            tools:text="7829.21"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/main_green"
+            android:text="--"
+            app:layout_constraintLeft_toRightOf="@id/tv_coin_name"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <!--涨跌幅-->
+        <TextView
+            android:layout_marginLeft="4dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_last_price"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingBottom="2dp"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="2dp"
+            android:background="@drawable/sl_border_green_fill"
+            android:id="@+id/tv_rose_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_green"
+            android:textSize="12sp"
+            tools:text="+1.88%" />
+
+        <!--关闭按钮-->
+        <ImageView
+            android:paddingLeft="15dp"
+            android:id="@+id/iv_close"
+            android:src="@drawable/icon_dialog_close"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+
+        <!--24小时量-->
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_24h_vol"
+            tools:text="7829.21"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/normal_text_color"
+            android:text="--"
+            app:layout_constraintRight_toLeftOf="@id/iv_close"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_24h_vol_label"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/hint_color"
+            android:text="@string/str_24h_vol"
+            app:layout_constraintRight_toLeftOf="@id/tv_24h_vol"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <!--最低价-->
+        <TextView
+            android:layout_marginRight="24dp"
+            android:id="@+id/tv_low_px"
+            tools:text="7829.21"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/normal_text_color"
+            android:text="--"
+            app:layout_constraintRight_toLeftOf="@id/tv_24h_vol_label"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_low_px_label"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/hint_color"
+            android:text="@string/str_low_px_label"
+            app:layout_constraintRight_toLeftOf="@id/tv_low_px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <!--最高价-->
+        <TextView
+            android:layout_marginRight="24dp"
+            android:id="@+id/tv_high_px"
+            tools:text="7829.21"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/normal_text_color"
+            android:text="--"
+            app:layout_constraintRight_toLeftOf="@id/tv_low_px_label"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/hint_color"
+            android:text="@string/str_high_px_label"
+            app:layout_constraintRight_toLeftOf="@id/tv_high_px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--指标-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/indicators_layout"
+        android:layout_below="@id/header_layout"
+        android:layout_alignParentRight="true"
+        android:layout_width="55dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_main_indicators_label"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_m"
+            />
+        <!--主图-->
+        <RadioGroup
+            android:gravity="center_vertical"
+            android:id="@+id/rg_main"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/main_tab_ma"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:text="MA"
+                android:textColor="@drawable/common_tab_text_color_selector"
+                android:textSize="@dimen/font_size_m" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/main_tab_boll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="BOLL"
+                android:textColor="@drawable/common_tab_text_color_selector"
+                android:textSize="@dimen/font_size_m" />
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/main_tab_eye"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:padding="15dp"
+                android:drawableRight="@drawable/common_eye_selector"
+                />
+        </RadioGroup>
+        <TextView
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_vice_indicators_label"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_m"
+            />
+        <!--副图-->
+        <RadioGroup
+            android:gravity="center_vertical"
+            android:id="@+id/rg_vice"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/vice_tab_macd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:text="MACD"
+                android:textColor="@drawable/common_tab_text_color_selector"
+                android:textSize="@dimen/font_size_m" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/vice_tab_kdj"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="KDJ"
+                android:textColor="@drawable/common_tab_text_color_selector"
+                android:textSize="@dimen/font_size_m" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/vice_tab_rsi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="RSI"
+                android:textColor="@drawable/common_tab_text_color_selector"
+                android:textSize="@dimen/font_size_m" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:gravity="center"
+                android:id="@+id/vice_tab_eye"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:padding="15dp"
+                android:drawableRight="@drawable/common_eye_selector"
+                />
+        </RadioGroup>
+
+    </LinearLayout>
+    <!--KLine时间轴-->
+    <RadioGroup
+        android:layout_toLeftOf="@id/indicators_layout"
+        android:id="@+id/rg_time"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_min_time"
+            style="@style/KTabRbStyle"
+            android:checked="true"
+            android:layout_width="0dp"
+            android:tag=""
+            android:layout_height="match_parent"
+            android:text="@string/str_min_time"
+            android:textSize="@dimen/font_size_m" />
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1min"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1min"
+            android:textSize="12sp" />
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_5min"
+            style="@style/KTabRbStyle"
+            android:checked="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_5min"
+            android:textSize="@dimen/font_size_m" />
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_15min"
+            style="@style/KTabRbStyle"
+            android:checked="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_15min"
+            android:textSize="@dimen/font_size_m" />
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_30min"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_30min"
+            android:textSize="12sp" />
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_4hour"
+            style="@style/KTabRbStyle"
+            android:checked="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_4hour"
+            android:textSize="@dimen/font_size_m" />
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_12hour"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_12hour"
+            android:textSize="12sp" />
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1day"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1day"
+            android:textSize="12sp" />
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1week"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1week"
+            android:textSize="12sp" />
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1month"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1month"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+    <!--K线区域-->
+    <com.sl.ui.library.widget.kline.view.KLineChartView
+        android:layout_below="@id/header_layout"
+        android:layout_above="@id/rg_time"
+        android:id="@+id/line_layout"
+        android:layout_marginRight="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:kc_background_color="@color/bg_card_color"
+        app:kc_grid_line_color="@color/kline_grid_line"
+        app:kc_marker_value_color="@color/chart_max_min"
+        app:kc_selector_background_color="@color/marker_bg"
+        app:kc_chart_logo = "@drawable/icon_kline_logo"
+        />
+
+</RelativeLayout>

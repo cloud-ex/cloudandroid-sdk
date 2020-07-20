@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <com.sl.ui.library.widget.BubbleRelativeLayout
+        app:bubble_cornerRadius="10"
+        app:bubble_halfBaseOfLeg="18dp"
+        app:bubble_padding="15dp"
+        android:background="@color/transparent"
+        app:bubble_shadowColor="@color/bg_color"
+        app:bubble_bgColor="@color/bg_item_color"
+        app:bubble_strokeWidth="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:padding="12dp"
+            android:id="@+id/tv_text"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+    </com.sl.ui.library.widget.BubbleRelativeLayout>
+
+</LinearLayout>

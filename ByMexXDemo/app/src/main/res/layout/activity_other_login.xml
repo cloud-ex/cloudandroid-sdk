@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_title="" />
+
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/icon_login_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <TextView
+            android:id="@+id/tv_login_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/iv_finger_icon"
+            android:layout_marginTop="68dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/icon_finger_tips"
+            android:layout_width="110dp"
+            android:layout_height="110dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_finger_unlock"
+            android:layout_marginTop="20dp"
+            android:layout_width="112dp"
+            android:layout_height="18dp"
+            android:text="@string/str_click_unlock_finger"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+        <com.sl.bymex.widget.gesture.LockPatternView
+            android:id="@+id/lpv_gesture"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="30dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_finger_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_finger_login"
+            android:textColor="@color/main_yellow"
+            android:textSize="14sp"
+            />
+
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/view_spit_line"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/line_focus_color"
+            android:layout_width="1px"
+            android:layout_height="13dp"/>
+
+        <TextView
+            android:id="@+id/tv_pwd_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_pwd_login"
+            android:textColor="@color/main_yellow"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

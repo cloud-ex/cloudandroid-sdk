@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/v_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+        <!--搜索框-->
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="8dp"
+            android:hint="@string/str_select_area"
+            android:paddingLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_list_counrty_code"
+        android:layout_below="@+id/v_title" />
+
+
+    <com.sl.bymex.widget.MySideBar
+        android:id="@+id/area_side_bar"
+        android:layout_width="12dp"
+        android:layout_height="420dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="5dp"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

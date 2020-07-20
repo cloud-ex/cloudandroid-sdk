@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 描边 -->
+
+    <corners
+        android:radius="3dp"/>
+
+    <solid
+        android:color="@color/bg_card_color"
+        />
+    <stroke android:color="@color/line_focus_color"  android:width="1px"/>
+
+</shape>

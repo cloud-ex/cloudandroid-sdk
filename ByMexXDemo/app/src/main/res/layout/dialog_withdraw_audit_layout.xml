@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/dialog_center_bg">
+
+    <ImageView
+        android:src="@drawable/icon_wait"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+    <TextView
+        android:gravity="center_vertical"
+        tools:visibility="visible"
+        tools:text="@string/str_asset_audit"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size"
+        />
+
+    <TextView
+        tools:text="您的提现申请已提交，请耐心等待可在提现记录中查看提现进度"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/sp_14" />
+
+
+    <View
+        android:layout_marginTop="20dp"
+        style="@style/common_horizon_line_style"
+       />
+
+    <com.sl.ui.library.widget.material.MaterialTextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="@string/common_text_btn_i_see"
+        android:textColor="@color/main_yellow"
+        android:textSize="16sp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/dialog_center_bg">
+
+
+    <TextView
+        android:gravity="center_vertical"
+        tools:visibility="visible"
+        android:text="@string/str_gains_balance_detail_label"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size"
+        />
+
+    <TextView
+        android:lineSpacingExtra="2dp"
+        android:text="@string/str_gains_balance_detail_tips"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_m" />
+    <!--资金费用-->
+    <RelativeLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/str_tax_fee"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            android:id="@+id/tv_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_m" />
+
+    </RelativeLayout>
+    <!--手续费-->
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/str_fee"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            android:id="@+id/tv_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_m" />
+
+    </RelativeLayout>
+
+    <!--平仓盈亏-->
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/str_close_profit"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            android:id="@+id/tv_close_profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_m" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.sl.ui.library.widget.material.MaterialTextView
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content_layout"
+            android:layout_toLeftOf="@+id/tv_sure"
+            android:text="@string/str_tax_fee_detail"
+            android:textColor="@color/main_yellow"
+            android:textSize="16sp"
+            />
+
+        <com.sl.ui.library.widget.material.MaterialTextView
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content_layout"
+            android:layout_alignParentRight="true"
+            android:text="@string/common_text_btn_i_see"
+            android:textColor="@color/hint_color"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

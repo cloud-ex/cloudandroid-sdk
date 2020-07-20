@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_content_bg"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="限价单买入"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_dialog_close" />
+
+    </RelativeLayout>
+    <View style="@style/common_horizon_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl_stop_win_loss_warp_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_stop_win_loss_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_stop_profit_loss"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size"
+            />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_last_price_simple"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_last_price"
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/main_green"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_liq_price"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:id="@+id/tv_liq_price"
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.sl.contract.library.widget.StopWinLossItem
+        android:id="@+id/item_stop_win"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.sl.contract.library.widget.StopWinLossItem
+        android:id="@+id/item_stop_loss"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        style="@style/common_horizon_line_style" />
+    <!--价格偏离最新价过高警告-->
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_open_close_risk_tips"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_open_close_risk_tips"
+        android:textColor="@color/main_red"
+        android:textSize="@dimen/font_size_normal"
+        />
+    <!--触发价格-->
+    <RelativeLayout
+        android:id="@+id/rl_trigger_price"
+        android:layout_marginTop="10dp"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_trigger_price"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_trigger_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0 USDT"
+            android:textColor="@color/main_green"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--价格-->
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_price"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0 USDT"
+            android:textColor="@color/main_green"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--数量-->
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_amount"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0 张"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--杠杆-->
+    <RelativeLayout
+        android:id="@+id/rl_leverage_layout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_leverage"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_leverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="全仓 100X"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--委托价值-->
+    <RelativeLayout
+        android:id="@+id/rl_entrust_value_layout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_entrust_value"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_entrust_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0.00 USDT"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--委托成本-->
+    <RelativeLayout
+        android:id="@+id/rl_entrust_cost_layout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_entrust_cost"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_entrust_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0.00 USDT"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--成交后仓位-->
+    <RelativeLayout
+        android:id="@+id/rl_deal_position_layout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_deal_poisition"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_deal_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textColor="@color/main_green"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+    <!--触发类型-->
+    <RelativeLayout
+        android:id="@+id/rl_trigger_price_type_layout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_trigger_price_type"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_trigger_price_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+
+    <!--有效时间-->
+    <RelativeLayout
+        android:id="@+id/rl_effective_time_layout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_strategy_effective_time_label"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_effective_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/tv_tips_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_common_normal"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="不再显示"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size" />
+
+
+
+    <com.sl.ui.library.widget.material.MaterialButton
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/bt_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_round_yellow_bg"
+        android:text="确定"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

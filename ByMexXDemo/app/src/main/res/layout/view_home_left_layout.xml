@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1.0"
+        android:background="@color/bg_card_color">
+
+        <RelativeLayout
+            android:id="@+id/rl_header_warp_layout"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/iv_account"
+                android:layout_centerVertical="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher_round"
+                />
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_account"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, Min"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_xl"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_uid"
+                    android:drawableRight="@drawable/icon_copy"
+                    android:drawablePadding="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UID:165329"
+                    android:textColor="@color/hint_color"
+                    android:textSize="@dimen/font_size_m"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                style="@style/right_arrow_img_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <!--全面经纪人-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="45dp"
+            android:background="@drawable/general_broker_bg"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全民经纪人"
+                android:textColor="@color/text_yellow_light"
+                android:textSize="@dimen/font_size_normal"
+                />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请好友.分享邀请链接"
+                android:textColor="@color/text_yellow_light"
+                android:textSize="@dimen/font_size_s"
+                />
+
+
+        </LinearLayout>
+
+        <!--资金划转-->
+        <com.sl.ui.library.widget.material.MaterialLinearLayout
+            android:id="@+id/item_asset_transfer"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:src="@drawable/icon_funds_transfer"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_funds_transfer"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+
+        </com.sl.ui.library.widget.material.MaterialLinearLayout>
+
+        <!--账户安全-->
+        <com.sl.ui.library.widget.material.MaterialLinearLayout
+            android:id="@+id/item_account_security"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:src="@drawable/icon_account_security"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_account_security"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+
+        </com.sl.ui.library.widget.material.MaterialLinearLayout>
+
+        <!--设置-->
+        <com.sl.ui.library.widget.material.MaterialLinearLayout
+            android:id="@+id/item_setting"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:src="@drawable/icon_setting"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_setting"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+
+        </com.sl.ui.library.widget.material.MaterialLinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.30"
+        android:layout_weight="4.0"
+        android:id="@+id/alpha_ll"
+        android:orientation="vertical"/>
+</LinearLayout>

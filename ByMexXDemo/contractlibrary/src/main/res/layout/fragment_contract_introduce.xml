@@ -1,0 +1,321 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_10">
+    <!--合约基础币种-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_contract_base_coin"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_contract_base_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="BTC" />
+    </RelativeLayout>
+
+    <!--保证金币种-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_margin_coin"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_margin_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="BTC" />
+    </RelativeLayout>
+    <!--合约属性-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_contract_property"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_contract_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="正向合约" />
+    </RelativeLayout>
+    <!--合约大小-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_contract_size"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_contract_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--最高杠杆-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_max_leverage"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_max_leverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--指数信息-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_index_source"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/tv_index_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--总持仓量-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_all_hold_vol"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_all_hold_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--成交量-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_deal_volume"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_deal_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--换手比-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_turnover_rate"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_swap_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--保险基金-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_insurance_fund"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_insurance_fund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+    <!--资金费率-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_funds_rate"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_funds_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="1张=0.233BTC" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:paddingTop="16dp"
+   >
+    <!--成交时间-->
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_deal_time"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            tools:text="2020/03/10 15:23"
+            android:layout_gravity="right"
+            android:id="@+id/tv_deal_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+             />
+    </RelativeLayout>
+    <!--成交价格-->
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_deal_price"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            tools:text="9163.82 USDT"
+            android:layout_gravity="right"
+            android:id="@+id/tv_deal_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            />
+    </RelativeLayout>
+    <!--成交量-->
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_deal_volume"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            tools:text="100 张"
+            android:layout_gravity="right"
+            android:id="@+id/tv_deal_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            />
+    </RelativeLayout>
+
+    <!--成交金额-->
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_deal_money"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            tools:text="9163.82 USDT"
+            android:layout_gravity="right"
+            android:id="@+id/tv_deal_px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            />
+    </RelativeLayout>
+    <!--手续费-->
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_fee"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <TextView
+            tools:text="9163.82 USDT"
+            android:layout_gravity="right"
+            android:id="@+id/tv_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="16dp"
+        style="@style/common_horizon_line_style" />
+
+
+</LinearLayout>

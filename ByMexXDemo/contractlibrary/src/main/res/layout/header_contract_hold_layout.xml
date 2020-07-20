@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@color/bg_card_color"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+    <!--最新价格-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/icon_last_price_tag"
+        android:drawablePadding="2dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_last_price_simple"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size_m"
+        app:layout_constraintRight_toRightOf="parent"
+         />
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:id="@+id/tv_last_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="0.00"
+        android:textColor="@color/main_green"
+        android:textSize="@dimen/font_size_m"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="42.9009" />
+    <!--合理价格-->
+    <TextView
+        android:drawableLeft="@drawable/icon_fair_price_tag"
+        android:drawablePadding="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_fair_price_simple"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size_m"
+        />
+
+    <TextView
+        android:id="@+id/tv_fair_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:gravity="center_vertical"
+        android:text="0.00"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size_m"
+        tools:text="0.00" />
+</LinearLayout>
+</LinearLayout>

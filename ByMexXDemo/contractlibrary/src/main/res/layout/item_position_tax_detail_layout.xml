@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="12dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/contract_order_card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tax_fee_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_tax_fee"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_position_vol_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_position_vol"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tax_fee_label" />
+
+        <TextView
+            android:id="@+id/tv_fair_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_fair_price"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_position_vol_label" />
+
+        <TextView
+            android:id="@+id/tv_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_time"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fair_price_label" />
+
+        <!--资金费用-->
+        <TextView
+            android:id="@+id/tv_tax_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--仓位数量-->
+        <TextView
+            android:id="@+id/tv_position_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="--"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tax_fee" />
+        <!--合理价格-->
+        <TextView
+            android:id="@+id/tv_fair_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="--"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_position_vol" />
+        <!--时间-->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_time"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fair_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

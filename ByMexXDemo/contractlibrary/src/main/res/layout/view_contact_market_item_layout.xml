@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:id="@+id/ll_layout"
+    android:layout_height="60dp">
+
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="BTCUSDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:id="@+id/tv_vol"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m"
+            tools:text="成交量:0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            tools:text="7390.20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:id="@+id/tv_cny_price"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_m"
+            tools:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_rate"
+        android:background="@drawable/btn_contract_market_green_fill"
+        android:text="0.00%"
+        android:textColor="@color/main_green"
+        android:textSize="@dimen/font_size_normal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

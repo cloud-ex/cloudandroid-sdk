@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14000000"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_top_height"
+        android:background="@drawable/dialog_content_bg"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/str_adjust_lever"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_dialog_close" />
+
+        </RelativeLayout>
+
+        <View style="@style/common_horizon_line_style" />
+        <!--切换全仓/逐仓-->
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="22dp"
+            app:tl_bar_color="@color/line_color"
+            app:tl_bar_stroke_color="@color/line_color"
+            app:tl_divider_color="@color/line_focus_color"
+            app:tl_divider_padding="10dp"
+            app:tl_divider_width="1dp"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_bounce_enable="false"
+            app:tl_indicator_color="@color/line_focus_color"
+            app:tl_indicator_corner_radius="8dp"
+            app:tl_indicator_height="35dp"
+            app:tl_textSelectColor="@color/text_color"
+            app:tl_textUnselectColor="@color/hint_color"
+            app:tl_textsize="@dimen/font_size_normal" />
+        <!--展示杠杆-->
+        <TextView
+            android:id="@+id/tv_lever"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30X"
+            android:textColor="@color/main_yellow"
+            android:textSize="32sp"
+            />
+
+        <!--滑动杠杆-->
+        <com.sl.ui.library.widget.bubble.BubbleSeekBar
+            android:id="@+id/sb_seek_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            app:bsb_hide_bubble="true"
+            app:bsb_max="100"
+            app:bsb_min="1"
+            app:bsb_progress="10"
+            app:bsb_second_track_color="@color/main_yellow"
+            app:bsb_second_track_drawable="@drawable/sl_icon_circle_small"
+            app:bsb_section_count="4"
+            app:bsb_section_text_color="@color/normal_text_color"
+            app:bsb_section_text_position="below_section_mark"
+            app:bsb_section_text_size="12sp"
+            app:bsb_show_section_mark="true"
+            app:bsb_show_section_text="true"
+            app:bsb_show_thumb_text="false"
+            app:bsb_track_size = "5dp"
+            app:bsb_second_track_size = "5dp"
+            app:bsb_thumb_drawable="@drawable/sl_icon_circle_big"
+            app:bsb_thumb_radius="15dp"
+            app:bsb_thumb_radius_on_dragging="12dp"
+            app:bsb_track_color="@color/bg_item_color"
+            app:bsb_track_drawable="@drawable/sl_icon_circle_small_default" />
+
+        <TextView
+            tools:visibility="visible"
+            android:id="@+id/tv_leverage_warn"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/sl_select_lever_warn"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m"
+            android:visibility="invisible" />
+
+        <com.sl.ui.library.widget.material.MaterialButton
+            android:id="@+id/bt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_round_yellow_bg"
+            android:text="@string/str_confirm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

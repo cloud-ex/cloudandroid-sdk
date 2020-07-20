@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_title="@string/str_account_security" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_second_verify"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <!--手机-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemLeftText="@string/str_phone_simple" />
+            <!--邮箱-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemLeftText="@string/str_email" />
+
+            <!--谷歌验证器-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemLeftText="@string/str_google_verify" />
+
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_pwd_setting"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <!--登录密码-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:visibility="gone"
+                android:id="@+id/item_login_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemRightText="@string/str_update"
+                app:itemLeftText="@string/str_login_pwd" />
+
+            <!--资金密码-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_fund_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemLeftText="@string/str_fund_pwd" />
+
+            <!--资金密码有效期-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:visibility="gone"
+                android:id="@+id/item_fund_pwd_effect_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemLeftText="@string/str_fund_pwd" />
+
+            <!--交易确认-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_tread_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isCheckWidget="true"
+                app:itemLeftText="@string/str_tread_confirm" />
+
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_login_setting"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <!--手势密码-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_gesture_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isCheckWidget="true"
+                app:itemLeftText="@string/str_gesture_pwd" />
+
+            <!--指纹密码-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_finger_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isCheckWidget="true"
+                app:itemLeftText="@string/str_finger_pwd" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

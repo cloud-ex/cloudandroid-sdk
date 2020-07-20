@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        app:bar_title="@string/str_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--昵称-->
+    <com.sl.ui.library.widget.CommonInputLayout
+        android:id="@+id/item_nick_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="40dp"
+        app:inputHint="@string/str_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <com.sl.ui.library.widget.CommonlyUsedButton
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:bgColor="@color/main_yellow"
+        app:bottonTextContent="@string/str_save"
+        app:buttonTextColor="@color/text_color"
+        app:normalEnable="true"
+        app:textStyleBold="true" />
+
+</LinearLayout>

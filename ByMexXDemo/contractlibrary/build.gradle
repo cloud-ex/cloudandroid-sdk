@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def config = rootProject.ext
+android {
+    compileSdkVersion  config.android.compileSdkVersion
+    buildToolsVersion config.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.android.minSdkVersion
+        targetSdkVersion config.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles  'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //UI库
+    api project(path: ':uilibrary')
+    // 合约SDK
+    api files('libs\\contract_sdkx_2.0_release.aar')
+
+}

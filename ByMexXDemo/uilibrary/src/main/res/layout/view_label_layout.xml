@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:id="@+id/tv_text"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:textSize="@dimen/font_size_normal"
+    android:textColor="@drawable/selector_tab_text_highlighted_color"
+    android:text="全部"
+    android:background="@drawable/filter_tab_selector" />
+

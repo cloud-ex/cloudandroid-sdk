@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14000000"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/dialog_content_bg"
+        android:orientation="vertical"
+        >
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/str_adjust_margins"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_dialog_close" />
+
+        </RelativeLayout>
+
+        <View style="@style/common_horizon_line_style" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--追加/减少-->
+                <com.flyco.tablayout.SegmentTabLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="22dp"
+                    app:tl_bar_color="@color/line_color"
+                    app:tl_bar_stroke_color="@color/line_color"
+                    app:tl_divider_color="@color/line_focus_color"
+                    app:tl_divider_padding="10dp"
+                    app:tl_divider_width="1dp"
+                    app:tl_indicator_anim_enable="true"
+                    app:tl_indicator_bounce_enable="false"
+                    app:tl_indicator_color="@color/line_focus_color"
+                    app:tl_indicator_corner_radius="8dp"
+                    app:tl_indicator_height="35dp"
+                    app:tl_textSelectColor="@color/text_color"
+                    app:tl_textUnselectColor="@color/hint_color"
+                    app:tl_textsize="@dimen/font_size_normal" />
+
+                <!--展示区域-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/contract_show_card_bg"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--当前仓位-->
+                    <RelativeLayout
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_current_position"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/tv_current_position"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0张"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                    </RelativeLayout>
+                    <!--保证金-->
+                    <RelativeLayout
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sl_str_margins"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/tv_margins"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00 USDT"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                    </RelativeLayout>
+
+                    <!--当前强平价格-->
+                    <RelativeLayout
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_now_liq_price"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/tv_liq_price"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00 USDT"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                    </RelativeLayout>
+
+                    <!--调整后强平价格-->
+                    <RelativeLayout
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_after_liq_price"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/tv_new_liq_price"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00 USDT"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/font_size_normal"
+                            />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <com.sl.ui.library.widget.CommonInputLayout
+                    android:id="@+id/item_input_layout"
+                    app:inputHelperHint="@string/str_max_add_margin"
+                    app:inputHint="@string/str_add_margin"
+                    app:rightText="@string/str_all"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.sl.ui.library.widget.material.MaterialButton
+                    android:layout_marginBottom="40dp"
+                    android:id="@+id/bt_sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/btn_round_yellow_bg"
+                    android:text="@string/str_confirm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

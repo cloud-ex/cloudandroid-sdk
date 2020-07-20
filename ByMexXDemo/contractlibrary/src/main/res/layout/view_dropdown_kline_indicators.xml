@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/drop_down_kline_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_main_indicators"
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_main_indicators_label"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="12dp"
+                android:background="@color/line_color"
+                app:layout_constraintLeft_toRightOf="@id/tv_main_indicators"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RadioGroup
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_vertical"
+                android:id="@+id/rg_main"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toRightOf="@id/tv_main_indicators">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/main_tab_ma"
+                    android:layout_width="57dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:checked="false"
+                    android:text="MA"
+                    android:textColor="@drawable/common_tab_text_color_selector"
+                    android:textSize="@dimen/font_size_m" />
+
+                <View
+                    android:background="@color/line_color"
+                    android:layout_width="1px"
+                    android:layout_height="12dp"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/main_tab_boll"
+                    android:layout_width="57dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="BOLL"
+                    android:textColor="@drawable/common_tab_text_color_selector"
+                    android:textSize="@dimen/font_size_m" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/main_tab_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@drawable/common_eye_selector"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/rg_main" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_focus_color"
+             />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_vice_indicators"
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_vice_indicators_label"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="12dp"
+                android:background="@color/line_color"
+                app:layout_constraintLeft_toRightOf="@id/tv_vice_indicators"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rg_vice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_vice_indicators">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/vice_tab_macd"
+                    android:layout_width="57dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:checked="false"
+                    android:text="MACD"
+                    android:textColor="@drawable/common_tab_text_color_selector"
+                    android:textSize="@dimen/font_size_m" />
+
+                <View
+                    android:background="@color/line_color"
+                    android:layout_width="1px"
+                    android:layout_height="12dp"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/vice_tab_kdj"
+                    android:layout_width="57dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="KDJ"
+                    android:textColor="@drawable/common_tab_text_color_selector"
+                    android:textSize="@dimen/font_size_m" />
+
+                <View
+                    android:background="@color/line_color"
+                    android:layout_width="1px"
+                    android:layout_height="12dp"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/vice_tab_rsi"
+                    android:layout_width="57dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="RSI"
+                    android:textColor="@drawable/common_tab_text_color_selector"
+                    android:textSize="@dimen/font_size_m" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/vice_tab_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@drawable/common_eye_selector"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/rg_vice" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

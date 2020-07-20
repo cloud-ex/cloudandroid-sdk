@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sl.bymex">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+
+    <application
+        android:hardwareAccelerated="true"
+        android:name=".app.ByMexApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:theme="@style/AppWelcome"
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.user.LoginActivity" />
+        <activity android:name=".ui.activity.user.RegisterActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.user.ForgetPwdActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.AreaActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.sl.ui.library.ui.activity.HtmlActivity"/>
+        <activity android:name=".ui.activity.user.SecuritySettingActivity"/>
+        <activity android:name=".ui.activity.asset.AssetTransferActivity"/>
+        <activity android:name=".ui.activity.asset.SelectCommonActivity"/>
+        <activity android:name=".ui.activity.user.SettingActivity"/>
+        <activity android:name=".ui.activity.user.PersonaInfoActivity"/>
+        <activity android:name=".ui.activity.user.UpdateNickNameActivity"/>
+        <activity android:name=".ui.activity.user.BindAccountActivity"/>
+        <activity android:name=".ui.activity.user.BindGoogleActivity"/>
+        <activity android:name=".ui.activity.asset.AssetPwdActivity"/>
+        <activity android:name=".ui.activity.user.GestureSettingActivity"/>
+        <activity android:name=".ui.activity.user.PwdSettingTipsActivity"/>
+        <activity android:name=".ui.activity.user.GestureVerifyActivity"/>
+        <activity android:name=".ui.activity.asset.AssetPwdEffectTimeActivity"/>
+        <activity android:name=".ui.activity.user.OtherLoginActivity"/>
+        <activity android:name=".ui.activity.asset.WithdrawActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.asset.DepositActivity"/>
+        <activity android:name=".ui.activity.asset.FundsFlowActivity"/>
+        <activity android:name=".ui.activity.asset.SelectCoinActivity"/>
+        <activity android:name=".ui.activity.asset.DwRecordActivity"/>
+        <activity android:name="io.github.xudaojie.qrcodelib.CaptureActivity"/>
+        <activity android:name=".ui.activity.asset.DwRecordDetailActivity"/>
+
+        <!--合约-->
+        <activity android:name="com.sl.contract.library.activity.ContractSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.sl.contract.library.activity.SelectLeverageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentActivity"/>
+        <activity android:name="com.sl.contract.library.activity.ContractEntrustActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.sl.contract.library.activity.ContractPositionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.sl.contract.library.activity.ContractEntrustDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.sl.contract.library.activity.ContractCalculateActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentActivity"/>
+        <activity android:name="com.sl.contract.library.activity.ContractKlineActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.sl.contract.library.activity.AdjustMarginActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentActivity"/>
+        <activity android:name="com.sl.contract.library.activity.FragmentWarpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.sl.contract.library.activity.ContractKlineHActivity"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

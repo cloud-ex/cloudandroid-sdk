@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <com.sl.ui.library.widget.material.MaterialImageView
+            android:id="@+id/iv_left"
+            android:src="@drawable/icon_arrow_left"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/title_tab_layout"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tl_bar_color="@color/transparent"
+            app:tl_bar_stroke_color="@color/transparent"
+            app:tl_indicator_height="0dp"
+            app:tl_divider_width="0dp"
+            app:tl_tab_padding= "10dp"
+            app:tl_textSelectColor="@color/text_color"
+            app:tl_textUnselectColor="@color/hint_color"
+            app:tl_textsize="@dimen/font_size" />
+        <com.sl.ui.library.widget.material.MaterialImageView
+            android:id="@+id/iv_filter"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_filter"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <!--切换普通委托/计划委托-->
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="18dp"
+        app:tl_bar_color="@color/line_color"
+        app:tl_bar_stroke_color="@color/line_color"
+        app:tl_divider_color="@color/line_focus_color"
+        app:tl_divider_padding="10dp"
+        app:tl_divider_width="1dp"
+        app:tl_indicator_anim_enable="true"
+        app:tl_indicator_bounce_enable="false"
+        app:tl_indicator_color="@color/line_focus_color"
+        app:tl_indicator_corner_radius="8dp"
+        app:tl_indicator_height="35dp"
+        app:tl_textSelectColor="@color/text_color"
+        app:tl_textUnselectColor="@color/hint_color"
+        app:tl_textsize="@dimen/font_size_normal" />
+
+    <FrameLayout
+        android:id="@+id/fl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

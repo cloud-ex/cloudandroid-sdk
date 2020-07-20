@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/contract_order_card_bg"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tv_position_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contract_side_label_red_bg"
+        android:text="多头"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_m" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+        <!--币种名称-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTCUSDT"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--杠杆-->
+        <TextView
+            android:id="@+id/tv_lever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/contract_hold_lever_bg"
+            android:text="100X"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_s"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_name"
+            app:layout_constraintLeft_toRightOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--分享-->
+        <TextView
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_share"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_m"
+            android:background="@drawable/btn_cancel_bg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <!--持仓均价-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_hold_px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:sl_itemTitle="@string/str_cost_price" />
+
+        <!--强平价格-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_liq_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            app:sl_itemTitle="@string/str_liq_price" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <!--未实现盈亏-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_unrealised_pnl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:sl_itemTitle="@string/str_unrealised_pnl" />
+
+        <!--回报率-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_floating_gains"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            app:sl_itemTitle="@string/str_floating_gains" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dash_line_bg" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content">
+            <!--已实现盈亏-->
+            <TextView
+                android:id="@+id/tv_gains_balance_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_gains_balance"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_gains_balance"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_gains_balance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <!--保证金-->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_margins_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_gains_balance_label"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sl_str_margins"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_margins"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_margins_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_gains_balance_label"
+                app:layout_constraintLeft_toRightOf="@id/tv_margins_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00%"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <!--止盈价-->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_stop_win_px_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_margins_label"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stop_win_px_label"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_stop_win_px"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_stop_win_px_label"
+                app:layout_constraintLeft_toRightOf="@id/tv_stop_win_px_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00/0.00%"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content">
+
+            <!--持仓量-->
+            <TextView
+                android:id="@+id/tv_hold_vol_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_hold_vol"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_hold_vol"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_hold_vol_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <!--可平量-->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_close_vol_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_hold_vol_label"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_close_vol_label"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_close_vol_label"
+                android:id="@+id/tv_close_vol"
+                app:layout_constraintStart_toEndOf="@id/tv_close_vol_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <!--止损价-->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_stop_loss_px_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_close_vol_label"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stop_loss_px_label"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m"
+                />
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_stop_loss_px"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_stop_loss_px_label"
+                app:layout_constraintLeft_toRightOf="@id/tv_stop_loss_px_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00/0.00%"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--撤销止盈-->
+        <TextView
+            android:layout_marginRight="6dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:id="@+id/tv_adjust_margins"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_yellow"
+            android:background="@drawable/btn_cancel_bg"
+            android:textSize="14sp"
+            android:text="@string/str_adjust_margins"
+           />
+
+        <!--止盈止损-->
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:id="@+id/tv_stop_profit_loss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_yellow"
+            android:background="@drawable/btn_cancel_bg"
+            android:textSize="14sp"
+            android:text="@string/str_stop_profit_loss"
+            />
+
+        <!--平仓-->
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:id="@+id/tv_close_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_yellow"
+            android:background="@drawable/btn_cancel_bg"
+            android:textSize="14sp"
+            android:text="@string/str_close_position"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

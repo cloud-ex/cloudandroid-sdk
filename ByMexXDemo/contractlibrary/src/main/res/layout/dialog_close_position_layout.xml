@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_content_bg"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/str_close_position"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_dialog_close" />
+
+    </RelativeLayout>
+    <View style="@style/common_horizon_line_style" />
+    <!--委托价格-->
+    <com.sl.ui.library.widget.CommonInputLayout
+        android:id="@+id/input_entrust_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        app:inputHelperHint=""
+        app:rightText = "USDT"
+        app:rightTextColor = "@color/normal_text_color"
+        app:inputHint="@string/str_entrust_price" />
+    <!--平仓数量-->
+    <com.sl.ui.library.widget.CommonInputLayout
+        android:id="@+id/input_close_vol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        app:inputHelperHint=""
+        app:rightText = "@string/str_vol_unit"
+        app:rightTextColor = "@color/normal_text_color"
+        app:inputHint="@string/str_close_vol" />
+
+
+    <!--滑动-->
+    <com.sl.ui.library.widget.bubble.BubbleSeekBar
+        android:id="@+id/seek_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        app:bsb_hide_bubble="true"
+        app:bsb_max="100"
+        app:bsb_min="1"
+        app:bsb_progress="10"
+        app:bsb_symbol = "%"
+        app:bsb_second_track_color="@color/main_yellow"
+        app:bsb_second_track_drawable="@drawable/sl_icon_circle_small"
+        app:bsb_section_count="4"
+        app:bsb_section_text_color="@color/normal_text_color"
+        app:bsb_section_text_position="below_section_mark"
+        app:bsb_section_text_size="12sp"
+        app:bsb_show_section_mark="true"
+        app:bsb_show_section_text="true"
+        app:bsb_show_thumb_text="false"
+        app:bsb_track_size = "5dp"
+        app:bsb_second_track_size = "5dp"
+        app:bsb_thumb_drawable="@drawable/sl_icon_circle_big"
+        app:bsb_thumb_radius="15dp"
+        app:bsb_thumb_radius_on_dragging="12dp"
+        app:bsb_track_color="@color/bg_item_color"
+        app:bsb_track_drawable="@drawable/sl_icon_circle_small_default" />
+
+    <LinearLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--市价全平-->
+        <com.sl.ui.library.widget.material.MaterialButton
+            android:id="@+id/bt_market_px_flat"
+            android:background="@drawable/btn_round_border_yellow_bg"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size"
+            android:text="@string/str_market_px_flat"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            />
+
+        <!--限价平仓-->
+        <com.sl.ui.library.widget.material.MaterialButton
+            android:id="@+id/tv_limit_px_close"
+            android:background="@drawable/btn_round_yellow_bg"
+            android:text="@string/str_limit_px_close"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

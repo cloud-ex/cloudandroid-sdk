@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tool_bar_height"
+    android:orientation="vertical"
+   >
+
+
+    <com.sl.ui.library.widget.material.MaterialImageView
+        android:id="@+id/iv_left"
+        android:src="@drawable/icon_arrow_left"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_xl"
+        tools:text="标题"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/main_yellow"
+        android:textSize="@dimen/font_size"
+        tools:text="右边"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:id="@+id/iv_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+         />
+</RelativeLayout>

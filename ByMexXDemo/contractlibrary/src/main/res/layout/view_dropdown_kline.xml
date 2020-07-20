@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:padding="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="1dp"
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/drop_down_kline_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1min"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1min"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_weight="0"
+            android:background="@color/line_color"
+            android:layout_width="1px"
+            android:layout_height="12dp"/>
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_30min"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_30min"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_weight="0"
+            android:background="@color/line_color"
+            android:layout_width="1px"
+            android:layout_height="12dp"/>
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_12hour"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_12hour"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_weight="0"
+            android:background="@color/line_color"
+            android:layout_width="1px"
+            android:layout_height="12dp"/>
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1day"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1day"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_weight="0"
+            android:background="@color/line_color"
+            android:layout_width="1px"
+            android:layout_height="12dp"/>
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1week"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1week"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_weight="0"
+            android:background="@color/line_color"
+            android:layout_width="1px"
+            android:layout_height="12dp"/>
+
+        <com.sl.ui.library.widget.material.MaterialRadioButton
+            android:id="@+id/tab_1month"
+            style="@style/KTabRbStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/str_1month"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+</LinearLayout>

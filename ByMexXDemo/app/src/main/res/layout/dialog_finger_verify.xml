@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/dialog_center_bg"
+   >
+
+    <ImageView
+        android:src="@drawable/icon_finger_tips"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_login_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:text="@string/str_verify_finger"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.sl.ui.library.widget.material.MaterialTextView
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content_layout"
+            android:layout_toLeftOf="@+id/tv_sure"
+            android:text="@string/common_text_btnCancel"
+            android:textColor="@color/hint_color"
+            android:textSize="16sp"
+            />
+
+        <com.sl.ui.library.widget.material.MaterialTextView
+            android:visibility="gone"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content_layout"
+            android:layout_alignParentRight="true"
+            android:text="@string/str_confirm"
+            android:textColor="@color/main_yellow"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/contract_order_card_bg"
+    android:id="@+id/ll_item_warp_layout"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+    <!--开多 开空-->
+    <TextView
+        android:background="@drawable/contract_side_label_red_bg"
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_buy_up"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv_contract_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            tools:text="BCHUSDT永续"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_contract_name"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="--"
+            tools:text="2019/01/16 15:00:23"
+            android:textColor="@color/normal_text_color"
+            android:textSize="12sp" />
+        <TextView
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_yellow"
+            android:background="@drawable/btn_cancel_bg"
+            android:textSize="12sp"
+            android:text="@string/str_cancel_order"
+            tools:visibility="visible"
+            tools:text="撤销"/>
+        <!--成交类型-->
+        <TextView
+            android:gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp"
+            tools:visibility="visible"
+            tools:text="完成成交"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--委托数量(张)-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_entrust_volume"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_entrust_volume"/>
+
+        <!--委托价格 (BTC)-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/item_entrust_price"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_entrust_price"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--成交数量 (张)-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:id="@+id/item_deal_volume"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_deal_volume"/>
+
+        <!--委托价值 (USDT)-->
+        <com.sl.contract.library.widget.ContractUpDownItemLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/item_entrust_value"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:sl_itemTitle="@string/str_entrust_value"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

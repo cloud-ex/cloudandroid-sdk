@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/tv_buy_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m" />
+
+            <TextView
+                android:text="@string/str_price"
+                android:id="@+id/tv_price_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m" />
+
+            <TextView
+                android:id="@+id/tv_sell_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m" />
+
+        </RelativeLayout>
+
+        <com.sl.contract.library.widget.ContractDishWidget
+            android:id="@+id/lv_depth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:depth_count="15"
+            tools:itemCount="10"
+            tools:listitem="@layout/view_contract_dish_item_layout" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

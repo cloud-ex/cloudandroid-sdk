@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_content_bg"
+    android:orientation="vertical"
+    android:paddingBottom="40dp">
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/str_open_contract_label"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_dialog_close" />
+
+    </RelativeLayout>
+    <View style="@style/common_horizon_line_style" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="280dp"
+        android:scrollbars="vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/str_open_contract_tips"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <CheckBox
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_tips_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/common_check_box_selector"
+        android:gravity="center_vertical"
+        android:text="@string/str_open_contract_risk_tips"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size" />
+
+    <com.sl.ui.library.widget.material.MaterialButton
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:enabled="false"
+        android:id="@+id/bt_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_round_yellow_selector"
+        android:text="@string/str_open_contract_confirm"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

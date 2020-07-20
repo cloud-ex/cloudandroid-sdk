@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_right_text="@string/str_mention_filling_record"
+        app:bar_title="@string/str_deposit" />
+
+    <!--选择币种-->
+    <com.sl.ui.library.widget.CommonItemLayout
+        android:id="@+id/item_coin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:itemBgColor="@color/bg_card_color"
+        app:itemRightText="@string/str_select_coin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/bg_card_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_deposit_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_deposit_warn"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.sl.ui.library.widget.material.MaterialTextView
+                android:id="@+id/tv_tab_erc20"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/filter_tab_selector"
+                android:gravity="center"
+                android:text="ERC20"
+                android:textColor="@drawable/common_tab_text_color_selector" />
+
+            <com.sl.ui.library.widget.material.MaterialTextView
+                android:id="@+id/tv_tab_omin"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/filter_tab_selector"
+                android:gravity="center"
+                android:text="OMIN"
+                android:textColor="@drawable/common_tab_text_color_selector" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@color/main_yellow" />
+
+        <TextView
+            android:id="@+id/tv_save_qr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/str_save_qr_code"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_normal" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/str_wallet_address"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_deposit_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="80dp"
+                android:text="--"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal" />
+
+
+            <ImageView
+                android:id="@+id/iv_deposit_address_copy"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_copy_big" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/dash_line_bg"
+            android:layerType="software" />
+
+        <TextView
+            android:id="@+id/tv_block_browser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/icon_browser"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_scan_block_browser"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dash_line_bg"
+            android:layerType="software" />
+        <!--Memo标签-->
+        <LinearLayout
+            android:id="@+id/ll_memo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/str_memo_label"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_memo_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="80dp"
+                    android:text="--"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_normal" />
+
+
+                <ImageView
+                    android:id="@+id/iv_memo_address_copy"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_copy_big" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/main_yellow_8"
+                android:drawableLeft="@drawable/icon_yellow_alert"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:text="@string/str_eos_caution"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_warm_prompt"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_deposit_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/str_deposit_prompt"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

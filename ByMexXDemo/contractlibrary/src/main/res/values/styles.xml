@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bg_color</item>
+        <item name="colorPrimaryDark">@color/bg_color</item>
+        <item name="colorAccent">@color/main_yellow</item>
+    </style>
+
+    <declare-styleable name="SlUpDownItemStyle">
+        <attr name="sl_itemTitle" format="string" />
+        <attr name="showExplain" format="boolean" />
+        <attr name="explainText" format="string" />
+        <attr name="contentGravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="contentTextColor" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="contractDepth">
+        <attr name="depth_count" format="integer" />
+    </declare-styleable>
+
+
+</resources>

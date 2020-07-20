@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sl.ui.library.widget.material.MaterialRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/iv_left_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/tv_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/iv_left_icon"
+        android:text="中文"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_normal" />
+
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_selected"
+        android:visibility="gone" />
+
+</com.sl.ui.library.widget.material.MaterialRelativeLayout>

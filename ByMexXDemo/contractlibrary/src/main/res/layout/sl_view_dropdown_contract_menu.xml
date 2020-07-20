@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="120dp"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:gravity="center"
+    android:background="@color/bg_card_color"
+    android:orientation="vertical">
+
+    <!--资金划转-->
+    <LinearLayout
+        android:id="@+id/ll_funds_transfer"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_funds_transfer" />
+
+        <TextView
+            android:id="@+id/tv_funds_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_funds_transfer"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+    <!--合约信息-->
+    <LinearLayout
+        android:id="@+id/ll_contract_info"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_contract_info" />
+
+        <TextView
+            android:id="@+id/tv_contract_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_contract_info"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+
+    <!--仓位信息-->
+    <LinearLayout
+        android:id="@+id/ll_position_info"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_position_info" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_position_info"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+    <!--委托信息-->
+    <LinearLayout
+        android:id="@+id/ll_entrust_info"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_entrust_info" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_entrust_info"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+    <!--合约设置-->
+    <LinearLayout
+        android:id="@+id/ll_contract_setting"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_contract_setting" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_contract_setting"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+    <!--闪电模式-->
+    <LinearLayout
+        android:id="@+id/ll_quick_mode"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_quick_mode" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_mode_switch"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_right_icon="@drawable/icon_filter"
+        app:bar_title="@string/str_mention_filling_record" />
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:tl_bar_color="@color/line_color"
+        app:tl_divider_color="@color/line_focus_color"
+        app:tl_divider_padding="10dp"
+        app:tl_divider_width="1dp"
+        app:tl_indicator_height="32dp"
+        app:tl_indicator_anim_enable="true"
+        app:tl_indicator_bounce_enable="false"
+        app:tl_indicator_color="@color/line_focus_color"
+        app:tl_bar_stroke_color="@color/line_color"
+        app:tl_indicator_corner_radius="8dp"
+        app:tl_textSelectColor="@color/text_color"
+        app:tl_textUnselectColor="@color/hint_color"
+        app:tl_textsize="@dimen/font_size_normal" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/lv_list"
+          tools:listitem="@layout/view_dw_record_item_layout"
+          tools:itemCount="10"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+
+</LinearLayout>

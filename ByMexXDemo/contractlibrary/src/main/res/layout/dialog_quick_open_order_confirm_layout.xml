@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_content_bg"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="BTCUSDT 开多"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_dialog_close" />
+
+    </RelativeLayout>
+    <View style="@style/common_horizon_line_style" />
+    <!--预估成交价-->
+    <RelativeLayout
+        android:id="@+id/rl_warp_estimated_layout"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/bg_item_color"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_estimated_deal_price"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+        <TextView
+            android:id="@+id/tv_estimated_deal_price"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0.00 USDT"
+            android:text="0.00 USDT"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+    </RelativeLayout>
+
+    <!--输入下单本金-->
+    <com.sl.ui.library.widget.CommonInputLayout
+        android:id="@+id/input_order_vol_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:rightText="USDT"
+        app:rightTextColor="@color/normal_text_color"
+        app:inputHelperHint="@string/str_max_order_vol"
+        app:inputHint="@string/str_input_order_vol_tips" />
+    <!--杠杆倍数-->
+    <RelativeLayout
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_lever_label"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+        <TextView
+            android:id="@+id/tv_lever"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15X"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+    </RelativeLayout>
+    <!--滑动杠杆-->
+    <com.sl.ui.library.widget.bubble.BubbleSeekBar
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/sb_seek_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:bsb_hide_bubble="true"
+        app:bsb_max="100"
+        app:bsb_min="1"
+        app:bsb_progress="10"
+        app:bsb_second_track_color="@color/main_yellow"
+        app:bsb_second_track_drawable="@drawable/sl_icon_circle_small"
+        app:bsb_section_count="4"
+        app:bsb_section_text_color="@color/normal_text_color"
+        app:bsb_section_text_position="below_section_mark"
+        app:bsb_section_text_size="12sp"
+        app:bsb_show_section_mark="true"
+        app:bsb_show_section_text="true"
+        app:bsb_show_thumb_text="false"
+        app:bsb_track_size = "5dp"
+        app:bsb_second_track_size = "5dp"
+        app:bsb_thumb_drawable="@drawable/sl_icon_circle_big"
+        app:bsb_thumb_radius="15dp"
+        app:bsb_thumb_radius_on_dragging="12dp"
+        app:bsb_track_drawable="@drawable/sl_icon_circle_small_default"
+        app:bsb_track_color="@color/bg_item_color" />
+
+    <!--杠杆提示-->
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_leverage_warn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_lever_enable_tips"
+        android:textColor="@color/main_red"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <!--可用余额-->
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_available_vol"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_available_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0 USDT"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <!--资金费率-->
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_funds_rate"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_funds_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0.00%"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+    <!--预计成交数量-->
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_estimated_deal_vol"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_deal_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="22.22%"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+
+    <com.sl.ui.library.widget.material.MaterialButton
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/bt_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_round_yellow_bg"
+        android:text="@string/str_quick_trade"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

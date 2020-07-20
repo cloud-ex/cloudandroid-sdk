@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_content_bg"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="40dp">
+
+    <include layout="@layout/include_dialog_close_view" />
+
+    <com.sl.ui.library.widget.material.MaterialTextView
+        android:gravity="center_vertical"
+        android:id="@+id/tv_professional_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icon_mode_normal"
+        android:drawablePadding="8dp"
+        android:text="@string/str_professional_mode"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_professional_mode_hints" />
+
+
+    <com.sl.ui.library.widget.material.MaterialTextView
+        android:gravity="center_vertical"
+        android:id="@+id/tv_quick_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icon_mode_normal"
+        android:drawablePadding="8dp"
+        android:text="@string/str_quick_mode"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_quick_mode_hints" />
+
+    <com.sl.ui.library.widget.material.MaterialButton
+        android:id="@+id/bt_sure"
+        android:layout_marginTop="40dp"
+        android:text="确定"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_round_yellow_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

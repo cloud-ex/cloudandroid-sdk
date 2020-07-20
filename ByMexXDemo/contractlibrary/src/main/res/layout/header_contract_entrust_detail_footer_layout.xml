@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_cancel_reason_layout"
+    android:visibility="gone"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_cancel_reason_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_cancel_reason"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_m" />
+
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:gravity="right"
+        android:layout_toRightOf="@id/tv_cancel_reason_label"
+        android:layout_alignParentRight="true"
+        tools:text="自动减仓时存在未成交的委托，被系统撤销"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_cancel_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_m" />
+
+
+</RelativeLayout>

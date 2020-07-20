@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bar_title="@string/str_contract_setting" />
+
+    <!--仓位展示单位-->
+    <com.sl.ui.library.widget.material.MaterialRelativeLayout
+        android:id="@+id/rl_display_unit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sl_item_height"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_contracts_unit_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_display_unit"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            style="@style/right_arrow_img_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:id="@+id/tv_contracts_unit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/str_vol_unit"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <View
+            style="@style/common_horizon_line_style"
+            android:layout_alignParentBottom="true" />
+    </com.sl.ui.library.widget.material.MaterialRelativeLayout>
+    <!--未实现盈亏计算-->
+    <RelativeLayout
+        android:id="@+id/rl_pnl_calculator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sl_item_height">
+
+        <TextView
+            android:id="@+id/tv_pnl_calculator_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_pnl_calculator"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            style="@style/right_arrow_img_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:id="@+id/tv_pnl_calculator_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/str_fair_price"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <View
+            style="@style/common_horizon_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <!--下单二次确认-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sl_item_height">
+
+        <TextView
+            android:id="@+id/tv_book_confirm_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_book_confirm"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_14" />
+
+
+
+        <Switch
+            android:id="@+id/switch_book_again"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:thumb="@drawable/switch_custom_thumb_selector"
+            android:track="@drawable/switch_custom_track_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"/>
+
+        <View
+            style="@style/common_horizon_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <!--有效时间-->
+    <RelativeLayout
+        android:id="@+id/rl_effective_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sl_item_height">
+
+        <TextView
+            android:id="@+id/tv_effective_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/str_strategy_effective_time"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            style="@style/right_arrow_img_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:id="@+id/tv_effective_time_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/str_in_24_hours"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m" />
+
+        <View
+            style="@style/common_horizon_line_style"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

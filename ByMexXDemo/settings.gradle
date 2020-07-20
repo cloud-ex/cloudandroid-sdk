@@ -1,0 +1,4 @@
+rootProject.name='ByMex'
+include ':app'
+include ':contractlibrary'
+include ':uilibrary'

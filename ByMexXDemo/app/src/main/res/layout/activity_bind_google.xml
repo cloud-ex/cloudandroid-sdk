@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:layout_marginBottom="40dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_title="@string/str_bind_google_authenticator"
+         />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_bind_google_tips1"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_qr_code"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@color/main_yellow" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_qr_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+        <TextView
+            android:id="@+id/tv_copy"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_copy"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_google_code_label"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <!--验证码-->
+    <com.sl.ui.library.service.vcedittext.VerificationCodeEditText
+        android:id="@+id/et_input"
+        app:bottomLineHeight="2dp"
+        app:bottomLineNormalColor="@color/line_color"
+        app:bottomLineSelectedColor="@color/line_focus_color"
+        app:figures="6"
+        app:selectedBackgroundColor="@color/transparent"
+        app:verCodeMargin="10dp"
+        android:layout_marginTop="30dp"
+        android:inputType="number"
+        android:textSize="@dimen/font_size_xxl"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密钥可用于手机更换或遗失时找回谷歌验证器，绑定前请妥善保管并备份密钥"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/font_size_m"
+        />
+
+
+        <com.sl.ui.library.widget.CommonlyUsedButton
+            android:id="@+id/bt_continue"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            app:bgColor="@color/main_yellow"
+            app:bottonTextContent="@string/str_bind"
+            app:buttonTextColor="@color/text_color"
+            app:normalEnable="true"
+            app:textStyleBold="true" />
+
+
+
+</LinearLayout>

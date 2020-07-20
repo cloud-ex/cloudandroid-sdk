@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_content_bg"
+    android:orientation="vertical"
+    android:paddingBottom="40dp">
+
+   <RelativeLayout
+       android:paddingLeft="20dp"
+       android:paddingRight="20dp"
+       android:layout_width="wrap_content"
+       android:layout_height="48dp">
+       <TextView
+           android:layout_centerVertical="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/str_fund_pwd"
+           android:textColor="@color/text_color"
+           android:textSize="@dimen/font_size_xxl"
+           />
+
+       <ImageView
+           android:id="@+id/iv_close"
+           android:layout_alignParentRight="true"
+           android:src="@drawable/icon_dialog_close"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"/>
+       <View
+           android:layout_alignParentBottom="true"
+           style="@style/common_horizon_line_style"
+          />
+   </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_sms_code_tips"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/font_size_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_input_fund_pwd" />
+
+
+    <!--验证码-->
+    <com.sl.ui.library.service.vcedittext.VerificationCodeEditText
+        android:id="@+id/et_code"
+        app:bottomLineHeight="2dp"
+        app:bottomLineNormalColor="@color/line_color"
+        app:bottomLineSelectedColor="@color/line_focus_color"
+        app:figures="6"
+        app:selectedBackgroundColor="@color/transparent"
+        app:verCodeMargin="10dp"
+        android:layout_marginTop="34dp"
+        android:inputType="numberPassword"
+        android:textSize="@dimen/font_size_xxl"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.sl.ui.library.widget.CommonlyUsedButton
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/bt_commit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:bgColor="@color/main_yellow"
+        app:bottonTextContent="@string/str_confirm"
+        app:buttonTextColor="@color/text_color"
+        app:normalEnable="true"
+        app:textStyleBold="true" />
+
+</LinearLayout>

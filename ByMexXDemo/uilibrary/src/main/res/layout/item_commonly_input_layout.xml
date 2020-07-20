@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/TextInputLayout"
+        app:hintTextAppearance="@style/TextInputTopHintLayout"
+
+        android:gravity="top"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_input"
+            android:textSize="@dimen/font_size"
+            android:layout_marginRight="50dp"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:importantForAutofill="no"
+            android:layout_height="40dp"
+            android:textColor="@color/text_color"
+           />
+
+        <View
+            android:id="@+id/view_cursor"
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+           />
+
+        <TextView
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_m"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/tv_helper"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:gravity="center_vertical|right"
+        android:textColor="@color/main_yellow"
+        android:textSize="@dimen/font_size_normal"
+        android:text="全部"
+        android:layout_gravity="center_vertical|right"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"/>
+
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:id="@+id/iv_right_icon"
+        android:gravity="center_vertical|right"
+        android:layout_gravity="center_vertical|right"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"/>
+</FrameLayout>

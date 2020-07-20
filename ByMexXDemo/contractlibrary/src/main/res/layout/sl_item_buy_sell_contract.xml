@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/fl_layout"
+    android:layout_height="24dp"
+    android:layout_marginBottom="2dp"
+   >
+     <FrameLayout
+         android:layout_gravity="right"
+         android:id="@+id/pb_volume"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         />
+
+     <TextView
+         android:layout_gravity="left|center_vertical"
+         android:id="@+id/tv_price"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_centerVertical="true"
+         android:textColor="@color/main_green"
+         android:gravity="center_vertical"
+         android:text="--"
+         android:textSize="12sp"/>
+
+     <TextView
+         android:layout_gravity="right|center_vertical"
+         android:id="@+id/tv_volume"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="15dp"
+         android:textColor="@color/normal_text_color"
+         android:gravity="center_vertical"
+         android:text="--"
+         android:textSize="12sp"/>
+
+</FrameLayout>

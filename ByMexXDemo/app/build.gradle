@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def config = rootProject.ext
+android {
+    compileSdkVersion config.android.compileSdkVersion
+    buildToolsVersion config.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "$change.applicationId"
+        minSdkVersion config.android.minSdkVersion
+        targetSdkVersion config.android.targetSdkVersion
+        versionCode change.versionCode
+        versionName "$change.versionName"
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        //最大堆内存
+        javaMaxHeapSize "8g"
+        //是否支持大工程模式
+        jumboMode = true
+        //预编译
+        preDexLibraries = true
+        //线程数
+        threadCount = 8
+    }
+
+
+    signingConfigs {
+        debug {//调试版本的签名配置
+            storeFile file("byMex.jks")
+            keyAlias "bymex"
+            storePassword "a12345678"
+            keyPassword "a12345678"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file("byMex.jks")
+            keyAlias "bymex"
+            storePassword "a12345678"
+            keyPassword "a12345678"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            resValue "string", "applicationId", "$change.applicationId"
+            resValue "string", "versionName", "$change.versionName"
+            resValue "integer", "versionCode", "$change.versionCode"
+
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+
+            resValue "string", "applicationId", "$change.applicationId"
+            resValue "string", "versionName", "$change.versionName"
+            resValue "integer", "versionCode", "$change.versionCode"
+        }
+    }
+
+// To inline the bytecode built with JVM target 1.8 into
+// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        //def createTime = new Date().format("yyyyMMdd ", TimeZone.getTimeZone("UTC"))
+        variant.outputs.each { output->
+            if (buildType == "release") {
+               // output.outputFileName = "Bymex_${change.versionName}_${createTime}.apk"
+                output.outputFileName = "Bymex_${change.versionName}.apk"
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':contractlibrary')
+    //banner https://github.com/youth5201314/banner
+    implementation 'com.youth.banner:banner:2.0.8'
+
+    compile ('com.github.bumptech.glide:glide:4.8.0'){
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor ('com.github.bumptech.glide:compiler:4.8.0') {
+        exclude group: 'com.android.support'
+    }
+    //网易云盾
+    implementation 'com.github.yidun:captcha-android-demo:2.4.3.1'
+    //三方网络框架 针对okhttp封装
+    api 'com.hjq:http:6.5'
+    api 'com.github.promeg:tinypinyin:2.0.3'
+    implementation 'com.google.zxing:core:3.3.0'
+    //指纹 https://github.com/uccmawei/FingerprintIdentify/blob/master/other/README_ZH.md
+    implementation 'com.wei.android.lib:fingerprintidentify:1.2.6'
+    //图片库
+    implementation ('com.github.bumptech.glide:glide:4.8.0'){
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor ('com.github.bumptech.glide:compiler:4.8.0') {
+        exclude group: 'com.android.support'
+    }
+    //QRCode
+    implementation 'com.github.XuDaojie:QRCode-Android:v0.4.2'
+    implementation 'com.android.support:support-dynamic-animation:25.3.0'
+    //leakcanary
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+}
+

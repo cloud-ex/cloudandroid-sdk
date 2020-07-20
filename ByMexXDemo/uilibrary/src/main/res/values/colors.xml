@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!--框线色-->
+    <color name="outline_color">#3F5372</color>
+    <!--线条色-->
+    <color name="line_color">#262626</color>
+    <color name="line_focus_color">#434343</color>
+    <!--卡片背景色-->
+    <color name="bg_card_color">#101010</color>
+    <!--item背景色 70% 100%-->
+    <color name="bg_toast_color">#b31D1D1D</color>
+    <color name="bg_item_color">#1D1D1D</color>
+    <color name="bg_top_toast_ok_color">#99177DDC</color>
+    <color name="bg_top_toast_normal_color">#99D87A16</color>
+
+    <!--底色-->
+    <color name="bg_color">#0A0A0A</color>
+    <!--字体颜色 30% 45% 65% 85% -->
+    <color name="line_short_color">#5A5A5A</color>
+    <color name="hint_color">#7D7D7D</color>
+    <color name="normal_text_color">#ACACAC</color>
+    <color name="text_color">#DBDBDB</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">@android:color/transparent</color>
+    <!--黄色 0% 8% 100% -->
+    <color name="main_yellow_0">#00D4B106</color>
+    <color name="main_yellow_8">#15D4B106</color>
+    <color name="main_yellow">#D4B106</color>
+    <!--颜色 10% 16% 100%  -->
+    <color name="main_green_light">#1A14B465</color>
+    <color name="main_green_light_16">#2914B465</color>
+    <color name="main_green">#14B465</color>
+    <!--颜色 10% 16% 100%  -->
+    <color name="main_red_light">#1AD6453C</color>
+    <color name="main_red_light_16">#29D6453C</color>
+    <color name="main_red_light_40">#DB4C4C</color>
+    <color name="main_red">#D6453C</color>
+    <!--按钮不可点击颜色-->
+    <color name="btn_disable_color">#434343</color>
+    <!--按钮触摸颜色-->
+    <color name="btn_touch_color">#1A000000</color>
+
+
+    <!-- 全面经纪人 -->
+    <color name="text_yellow_light">#e0cea2</color>
+
+    <!--K线-->
+    <color name="chart_selected_indicator">#828EA1</color>
+    <color name="chart_ma5">#F5CB89</color>
+    <color name="chart_ma10">#5FCFBF</color>
+    <color name="chart_ma30">#DD89F5</color>
+    <color name="chart_max_min">#DBDBDB</color>
+    <color name="chart_vol">#E9A991</color>
+    <color name="chart_selected_y">#40828EA1</color>
+    <color name="chart_selected_x">#828EA1</color>
+    <color name="marker_bg">#101010</color>
+    <color name="chart_line_background">#1a2489F1</color>
+    <color name="marker_border">#1D1D1D</color>
+    <color name="kline_grid_line">#262626</color>
+
+
+
+</resources>

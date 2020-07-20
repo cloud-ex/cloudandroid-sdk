@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        app:bar_title="@string/str_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--语言-->
+    <com.sl.ui.library.widget.CommonItemLayout
+        android:id="@+id/item_language_layout"
+        android:layout_marginTop="20dp"
+        app:itemRightText="@string/str_simplified_chinese"
+        app:itemLeftText="@string/str_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--涨跌色-->
+    <com.sl.ui.library.widget.CommonItemLayout
+        android:id="@+id/item_rise_layout"
+        app:itemRightText="@string/str_green_up_red_down"
+        app:itemLeftText="@string/str_rise_fall_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <com.sl.ui.library.widget.CommonlyUsedButton
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/bt_exit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:bgColor="@color/main_yellow"
+        app:bottonTextContent="@string/str_exit"
+        app:buttonTextColor="@color/text_color"
+        app:normalEnable="true"
+        app:textStyleBold="true" />
+
+</LinearLayout>

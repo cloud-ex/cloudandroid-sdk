@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_right_text="@string/str_mention_filling_record"
+        app:bar_title="@string/str_withdraw" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--选择币种-->
+            <com.sl.ui.library.widget.CommonItemLayout
+                android:id="@+id/item_coin_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:itemBgColor="@color/bg_card_color"
+                app:itemRightText="@string/str_select_coin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bg_card_color"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="15dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.sl.ui.library.widget.material.MaterialTextView
+                        android:id="@+id/tv_tab_erc20"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/filter_tab_selector"
+                        android:gravity="center"
+                        android:text="ERC20"
+                        android:textColor="@drawable/common_tab_text_color_selector" />
+
+                    <com.sl.ui.library.widget.material.MaterialTextView
+                        android:id="@+id/tv_tab_omin"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/filter_tab_selector"
+                        android:gravity="center"
+                        android:text="OMIN"
+                        android:textColor="@drawable/common_tab_text_color_selector" />
+
+
+                </LinearLayout>
+                <!--提现地址-->
+                <com.sl.ui.library.widget.CommonInputLayout
+                    android:id="@+id/item_address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:inputHelperHint=""
+                    app:inputHint="@string/str_input_withdraw_address"
+                    app:rightIcon="@drawable/icon_scan" />
+                <!--Eos memo标签-->
+                <com.sl.ui.library.widget.CommonInputLayout
+                    android:id="@+id/item_memo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:inputHelperHint=""
+                    app:inputHint="@string/str_input_eos_tag"
+                    app:rightIcon="@drawable/icon_scan" />
+                <!--提现数量-->
+                <com.sl.ui.library.widget.CommonInputLayout
+                    android:id="@+id/item_vol_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:inputHelperHint="@string/str_balance"
+                    app:inputHint="@string/str_withdraw_vol"
+                    app:rightText="@string/str_all" />
+
+                <!--资金密码 动态-->
+                <com.sl.ui.library.widget.CommonInputLayout
+                    android:id="@+id/item_pwd_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:inputHelperHint=""
+                    app:inputHint="@string/str_input_asset_pwd"
+                    app:rightText="" />
+            </LinearLayout>
+            <!--矿工手续费-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bg_card_color"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/str_miners_fee"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_miner_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/font_size_normal" />
+            </RelativeLayout>
+            <!--实际到账-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bg_card_color"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/str_actual_to_account"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_actual_to_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/font_size_normal" />
+            </RelativeLayout>
+
+            <com.sl.ui.library.widget.CommonlyUsedButton
+                android:id="@+id/bt_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                app:bgColor="@color/main_yellow"
+                app:bottonTextContent="@string/str_confirm"
+                app:buttonTextColor="@color/text_color"
+                app:normalEnable="true"
+                app:textStyleBold="true" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

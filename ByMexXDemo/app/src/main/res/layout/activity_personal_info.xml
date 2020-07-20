@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        app:bar_title="@string/str_personal_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--头像-->
+    <com.sl.ui.library.widget.material.MaterialRelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sl_item_height"
+        >
+
+        <TextView
+            android:drawablePadding="4dp"
+            android:id="@+id/tv_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_14"
+            android:text="@string/str_photo" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_right_warp_layout"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@mipmap/ic_launcher_round"
+                android:id="@+id/tv_right_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <ImageView
+                style="@style/right_arrow_img_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/common_horizon_line_style"
+            android:layout_alignParentBottom="true" />
+    </com.sl.ui.library.widget.material.MaterialRelativeLayout>
+
+
+    <!--昵称-->
+    <com.sl.ui.library.widget.CommonItemLayout
+        android:id="@+id/item_nick_layout"
+        app:itemRightText="@string/str_un_setting"
+        app:itemLeftText="@string/str_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

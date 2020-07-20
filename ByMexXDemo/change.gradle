@@ -1,0 +1,8 @@
+ext {
+    change = [
+            applicationId :"com.sl.bymex_sdk",
+            versionCode:1000,
+            versionName:"1.0.0",
+    ]
+
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/normal_text_color"
+        android:textSize="14sp"
+        tools:text="2019/01/16 15:00:23" />
+
+    <TextView
+        android:paddingLeft="80dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_interval"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:text="@string/str_every_8hours"
+        android:textColor="@color/normal_text_color"
+        android:textSize="14sp"
+        tools:text="每8小时" />
+
+    <TextView
+        android:id="@+id/tv_funding_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        tools:text="10.6901 USDT" />
+
+</RelativeLayout>
+

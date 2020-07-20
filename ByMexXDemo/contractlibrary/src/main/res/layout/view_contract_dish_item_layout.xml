@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="2dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <!--买盘-->
+        <FrameLayout
+            android:id="@+id/ll_buy_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ll_sell_Layout">
+
+            <View
+                android:id="@+id/view_buy_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@color/main_green_light" />
+
+            <TextView
+                android:id="@+id/tv_buy_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="--"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="200.0" />
+
+            <TextView
+                android:id="@+id/tv_buy_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="10dp"
+                android:text="--"
+                android:textColor="@color/main_green"
+                android:textSize="@dimen/font_size_m"
+                tools:text="7156.89" />
+        </FrameLayout>
+
+        <!--卖盘-->
+        <FrameLayout
+            android:id="@+id/ll_sell_Layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/ll_buy_layout">
+
+            <View
+                android:id="@+id/view_sell_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_red_light" />
+
+            <TextView
+                android:id="@+id/tv_sell_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="--"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_size_m"
+                tools:text="7156.89" />
+
+            <TextView
+                android:id="@+id/tv_sell_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:text="--"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size_m"
+                tools:text="200" />
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

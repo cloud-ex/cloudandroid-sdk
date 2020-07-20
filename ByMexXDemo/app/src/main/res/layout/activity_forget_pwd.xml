@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_right_text="" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/include_login_header_layout" />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_user_label"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_user_label"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+        <!--手机号码/邮箱-->
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/input_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:inputHelperHint=""
+            app:inputHint="@string/str_phone_email" />
+
+        <!--设置密码-->
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/input_pwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:inputHelperHint="@string/str_pwd_input_tips"
+            app:inputHint="@string/str_setting_pwd"
+            app:rightIcon="@drawable/icon_eye_off" />
+
+        <!--确认密码-->
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/input_sure_pwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:inputHelperHint=""
+            app:inputHint="@string/str_sure_pwd"
+            app:rightIcon="@drawable/icon_eye_off" />
+
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_update_pwd_tips"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_update_pwd_tips"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_m"
+                />
+
+            <com.sl.ui.library.widget.CommonlyUsedButton
+                android:id="@+id/bt_continue"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                app:bgColor="@color/main_yellow"
+                app:bottonTextContent="@string/str_continue"
+                app:buttonTextColor="@color/text_color"
+                app:normalEnable="true"
+                app:textStyleBold="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

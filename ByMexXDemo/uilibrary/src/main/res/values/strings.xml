@@ -1,0 +1,49 @@
+<resources>
+    <string name="common_text_btnCancel">取消</string>
+    <string name="common_text_btn_i_see">我知道了</string>
+    <string name="str_confirm">确定</string>
+
+    <string name="http_unknown_error">请求出错，未知错误</string>
+    <string name="http_account_error">账号异常，请重新登录</string>
+    <string name="http_data_explain_error">数据解析异常，请稍后</string>
+    <string name="http_server_out_time">服务器请求超时，请稍后再试</string>
+    <string name="http_network_error">请求失败，请检查网络设置</string>
+    <string name="http_server_error">服务器响应异常，请稍后再试</string>
+    <string name="http_request_cancel">请求被中断，请重试</string>
+    <string name="str_copy_succeed">拷贝成功</string>
+    <string name="str_save_failed">保存失败</string>
+    <string name="str_save_succeed">保存成功</string>
+    <string name="str_load_fail">加载失败</string>
+    <string name="str_loading">加载中...</string>
+    <string name="str_tips">提示</string>
+    <string name="str_cancel_order">撤销</string>
+
+    <string name="str_min_time">分时</string>
+    <string name="str_12hour">12时</string>
+    <string name="str_15min">15分</string>
+    <string name="str_1day">1天</string>
+    <string name="str_1min">1分</string>
+    <string name="str_1week">1周</string>
+    <string name="str_24h_vol">24h量</string>
+    <string name="str_2hour">2时</string>
+    <string name="str_30min">30分</string>
+    <string name="str_4hour">4时</string>
+    <string name="str_5min">5分</string>
+    <string name="str_60min">60分</string>
+    <string name="str_6hour">6时</string>
+    <string name="str_1month">1月</string>
+    <string name="str_change_value">涨跌额</string>
+    <string name="str_change_rate">涨跌幅</string>
+    <string name="str_deal_volume">成交量</string>
+    <string name="kline_action_main">主图</string>
+    <string name="kline_text_close">收</string>
+    <string name="kline_text_dealTime">时间</string>
+    <string name="kline_text_high">高</string>
+    <string name="kline_text_low">低</string>
+    <string name="kline_text_open">开</string>
+    <string name="kline_text_scale">指标</string>
+    <string name="str_reset">重置</string>
+    <string name="str_no_data">无更多数据!</string>
+    <string name="str_type">类型</string>
+    <string name="str_coin">币种</string>
+</resources>

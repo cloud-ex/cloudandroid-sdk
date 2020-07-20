@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_right_text="@string/str_register" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/include_login_header_layout" />
+
+        <!--国家地区-->
+        <LinearLayout
+            android:id="@+id/rl_countries_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_countries_regions_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_countries_regions"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_m" />
+
+            <RelativeLayout
+                android:id="@+id/rl_countries_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_countries_regions_label"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tv_city_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="中国 +86"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow_down" />
+            </RelativeLayout>
+
+            <View
+                style="@style/common_horizon_line_style"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+        <!--手机号码/邮箱-->
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/input_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:inputHelperHint=""
+            app:inputHint="@string/str_phone" />
+
+        <!--设置密码-->
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/input_pwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:inputHelperHint=""
+            app:inputHint="@string/str_setting_pwd"
+            app:rightIcon="@drawable/icon_eye_off" />
+
+        <!--确认密码-->
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/input_sure_pwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:inputHelperHint=""
+            app:inputHint="@string/str_sure_pwd"
+            app:rightIcon="@drawable/icon_eye_off" />
+        <!--注册协议-->
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_register_agree"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size_m" />
+            <TextView
+                android:id="@+id/tv_user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_user_agreement_label"
+                android:textColor="@color/main_yellow"
+                android:textSize="@dimen/font_size_m" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_and"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size_m" />
+
+            <TextView
+                android:id="@+id/tv_legal_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_legal_explain"
+                android:textColor="@color/main_yellow"
+                android:textSize="@dimen/font_size_m" />
+        </LinearLayout>
+
+        <com.sl.ui.library.widget.CommonlyUsedButton
+            android:id="@+id/bt_continue"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            app:bgColor="@color/main_yellow"
+            app:bottonTextContent="@string/str_continue"
+            app:buttonTextColor="@color/text_color"
+            app:normalEnable="true"
+            app:textStyleBold="true" />
+
+        <TextView
+            android:id="@+id/tv_switch_register"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_email_register"
+            android:textColor="@color/main_yellow"
+            android:textSize="@dimen/font_size_normal" />
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

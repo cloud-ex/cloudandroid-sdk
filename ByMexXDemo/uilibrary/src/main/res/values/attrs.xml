@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonlyUsedButtonView">
+        <attr name="bgColor" format="color" />
+        <attr name="buttonTextColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textStyleBold" format="boolean" />
+        <attr name="isShowLoading" format="boolean" />
+        <attr name="normalEnable" format="boolean" />
+        <attr name="normalSelectEnable" format="boolean" />
+        <attr name="bottonTextContent" format="string" />
+    </declare-styleable>
+    <!--Input Style start-->
+    <style name="TextInputLayout" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="colorControlNormal">@color/hint_color</item>
+        <item name="colorControlActivated">@color/hint_color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="TextInputTopHintLayout">
+        <item name="android:textColor">@color/main_yellow</item>
+        <item name="android:textSize">@dimen/font_size_m</item>
+    </style>
+    <!--Input Style end-->
+    <declare-styleable name="inputLayout">
+        <attr name="inputHint" format="string" />
+        <attr name="inputHelperHint" format="string" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextColor" format="color|reference" />
+        <attr name="rightIcon" format="reference" />
+    </declare-styleable>
+
+    <!--Input Style end-->
+    <declare-styleable name="titleBarLayout">
+        <attr name="bar_title" format="string" />
+        <attr name="bar_right_text" format="string" />
+        <attr name="bar_right_icon" format="reference" />
+        <attr name="bar_right_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EmptyLayout">
+        <attr name="empty_text" format="string" />
+        <attr name="empty_icon" format="reference" />
+    </declare-styleable>
+
+    <!--Input Style end-->
+    <declare-styleable name="commonItemLayout">
+        <attr name="itemLeftText" format="string" />
+        <attr name="itemRightText" format="string" />
+        <attr name="isCheckWidget" format="boolean" />
+        <attr name="itemBgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="KLineChartView">
+        <!--边界值-->
+        <attr name="kc_boundary_value" format="dimension" />
+
+        <!--公共的-->
+        <attr name="kc_text_size" format="dimension" />
+        <attr name="kc_text_color" format="color" />
+        <attr name="kc_timeLineFillTopColor" format="color" />
+        <attr name="kc_timeLineFillBottomColor" format="color" />
+
+        <attr name="kc_marker_value_color" format="color" />
+        <attr name="kc_line_width" format="dimension" />
+        <attr name="kc_background_color" format="color" />
+        <attr name="kc_selected_line_color" format="color" />
+        <attr name="kc_selected_line_width" format="dimension" />
+        <attr name="kc_grid_line_width" format="dimension" />
+        <attr name="kc_grid_line_color" format="color" />
+        <attr name="kc_point_width" format="dimension" />
+        <!--macd-->
+        <attr name="kc_macd_width" format="dimension" />
+        <attr name="kc_dif_color" format="color" />
+        <attr name="kc_dea_color" format="color" />
+        <attr name="kc_macd_color" format="color" />
+        <!--kdj-->
+        <attr name="kc_k_color" format="color" />
+        <attr name="kc_d_color" format="color" />
+        <attr name="kc_j_color" format="color" />
+        <!--rsi-->
+        <attr name="kc_rsi1_color" format="color" />
+        <attr name="kc_rsi2_color" format="color" />
+        <attr name="kc_ris3_color" format="color" />
+        <!--boll-->
+        <attr name="kc_up_color" format="color" />
+        <attr name="kc_mb_color" format="color" />
+        <attr name="kc_dn_color" format="color" />
+        <!--main-->
+        <attr name="kc_ma5_color" format="color" />
+        <attr name="kc_ma10_color" format="color" />
+        <attr name="kc_ma20_color" format="color" />
+        <attr name="kc_candle_width" format="dimension" />
+        <attr name="kc_candle_line_width" format="dimension" />
+        <attr name="kc_selector_background_color" format="color" />
+        <attr name="kc_selector_text_size" format="dimension" />
+        <attr name="kc_candle_solid" format="boolean" />
+
+        <attr name="kc_selected_color_x" format="color" />
+        <attr name="kc_selected_color_y" format="color" />
+        <attr name="kc_chart_logo" format="reference" />
+        <!--tab-->
+        <attr name="kc_tab_background_color" format="color" />
+        <attr name="kc_tab_text_color" format="color" />
+        <attr name="kc_tab_indicator_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SlBubbleSeekBar">
+        <attr name="bsb_min" format="float|reference" /> <!--min < max, default: 0.0f-->
+        <attr name="bsb_max" format="float|reference" /> <!--min < max, default: 100.0f-->
+        <attr name="bsb_symbol" format="string" /> <!--min < max, default: 100.0f-->
+        <attr name="bsb_progress" format="float|reference" /> <!--real time progress value, default: min-->
+        <attr name="bsb_is_float_type" format="boolean" /> <!--support for float type-->
+        <attr name="bsb_track_size" format="dimension|reference" /> <!--height of right-track(on the right of thumb), default: 2dp-->
+        <!--height of left-track(on the left of thumb), default: 2dp higher than right-track's height-->
+        <attr name="bsb_second_track_size" format="dimension|reference" />
+        <attr name="bsb_thumb_radius" format="dimension|reference" /> <!--radius of thumb, default: 2dp higher than left-track's height-->
+        <!--radius of thumb when be dragging, default: 2 times of left-track's height-->
+        <attr name="bsb_thumb_radius_on_dragging" format="dimension|reference" />
+        <attr name="bsb_track_color" format="color|reference" /> <!--color of right-track, default: R.color.colorPrimary-->
+        <attr name="bsb_track_drawable" format="reference" /> <!--color of right-track, default: R.color.colorPrimary-->
+        <attr name="bsb_second_track_color" format="color|reference" /> <!--color of left-track, default: R.color.colorAccent-->
+        <attr name="bsb_second_track_drawable" format="reference" /> <!--color of left-track, default: R.color.colorAccent-->
+        <attr name="bsb_thumb_color" format="color|reference" /> <!--color of thumb, default: same as left-track's color-->
+        <attr name="bsb_thumb_drawable" format="reference" /> <!--color of left-track, default: R.color.colorAccent-->
+        <attr name="bsb_section_count" format="integer|reference" /> <!--shares of whole progress(max - min), default: 10-->
+        <attr name="bsb_show_section_mark" format="boolean" /> <!--show demarcation points or not, default: false-->
+        <attr name="bsb_auto_adjust_section_mark" format="boolean" /> <!--auto scroll to the nearest section_mark or not, default: false-->
+        <attr name="bsb_show_section_text" format="boolean" /> <!--show section-text or not, default: false-->
+        <attr name="bsb_section_text_size" format="dimension|reference" /> <!--text size of section-text, default: 14sp-->
+        <attr name="bsb_section_text_color" format="color|reference" /> <!--text color of section-text, default: same as right-track's color-->
+        <!--text position of section-text relative to track, sides, bottom_sides, below_section_mark, default: sides-->
+        <attr name="bsb_section_text_position">
+            <enum name="sides" value="0" />
+            <enum name="bottom_sides" value="1" />
+            <enum name="below_section_mark" value="2" />
+        </attr>
+        <attr name="bsb_section_text_interval" format="integer" /> <!--the interval of two section-text, default: 1-->
+        <attr name="bsb_show_thumb_text" format="boolean" /> <!--show real time progress-text under thumb or not, default: false-->
+        <attr name="bsb_thumb_text_size" format="dimension|reference" /> <!--text size of progress-text, default: 14sp-->
+        <attr name="bsb_thumb_text_color" format="color|reference" /> <!--text color of progress-text, default: same as left-track's color-->
+        <attr name="bsb_show_progress_in_float" format="boolean" /> <!--show bubble-progress in float or not, default: false-->
+        <attr name="bsb_touch_to_seek" format="boolean" /> <!--touch anywhere on track to quickly seek, default: false-->
+        <attr name="bsb_seek_step_section" format="boolean" /> <!--seek one step by one section, the progress is discrete, default: false-->
+        <attr name="bsb_seek_by_section" format="boolean" /> <!--seek by section, the progress may not be linear, default: false-->
+        <attr name="bsb_bubble_color" format="color|reference" /> <!--color of bubble, default: same as left-track's color-->
+        <attr name="bsb_bubble_text_size" format="dimension|reference" /> <!--text size of bubble-progress, default: 14sp-->
+        <attr name="bsb_bubble_text_color" format="color|reference" /> <!--text color of bubble-progress, default: #ffffffff-->
+        <attr name="bsb_anim_duration" format="integer" /> <!--duration of animation, default: 200ms-->
+        <attr name="bsb_always_show_bubble" format="boolean" /> <!--bubble shows all time, default: false-->
+        <attr name="bsb_always_show_bubble_delay" format="integer" /> <!--the delay duration before bubble shows all the time, default: 200ms-->
+        <attr name="bsb_hide_bubble" format="boolean" /> <!--hide bubble, default: false-->
+        <attr name="bsb_rtl" format="boolean" /> <!--right to left, default: false-->
+    </declare-styleable>
+
+    <declare-styleable name="bubble">
+        <attr name="bubble_bgColor" format="color" />
+        <attr name="bubble_shadowColor" format="color" />
+        <attr name="bubble_padding" format="dimension" />
+        <attr name="bubble_strokeWidth" format="float" />
+        <attr name="bubble_cornerRadius" format="float" />
+        <attr name="bubble_halfBaseOfLeg" format="dimension" />
+    </declare-styleable>
+</resources>

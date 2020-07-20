@@ -1,0 +1,128 @@
+<resources>
+
+    <style name="leftin_rightout_DialogFg_animstyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_right_out</item>
+    </style>
+    <style name="leftout_rightin_DialogFg_animstyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_left_out</item>
+    </style>
+
+    <style name="leftin_rightout_DialogFg_style">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowAnimationStyle">@style/leftin_rightout_DialogFg_animstyle</item>
+    </style>
+
+
+    <style name="leftOut_rightin_DialogFg_style">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowAnimationStyle">@style/leftout_rightin_DialogFg_animstyle</item>
+    </style>
+
+
+
+    <!--右箭头样式-->
+    <style name="right_arrow_img_style">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:src">@drawable/icon_arrow_right</item>
+    </style>
+
+    <style name="common_horizon_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+    <!--顶部Toast样式 从上到下-->
+    <style name="TopToastStyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/top_toast_in</item>
+        <item name="@android:windowExitAnimation">@anim/top_toast_out</item>
+    </style>
+
+    <!--Pop样式 从上到下-->
+    <style name="TopPopStyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/pop_top_in</item>
+        <item name="@android:windowExitAnimation">@anim/pop_top_out</item>
+    </style>
+
+    <!--验证码的属性-->
+    <declare-styleable name="VerCodeEditText">
+        <attr name="figures" format="integer" />
+        <attr name="verCodeMargin" format="dimension" />
+        <attr name="bottomLineSelectedColor" format="reference" />
+        <attr name="bottomLineNormalColor" format="reference" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="selectedBackgroundColor" format="reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+    </declare-styleable>
+
+    <!--游览器进度-->
+    <style name="ListItemDownProgress" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/normal_progressbar</item>
+        <item name="android:indeterminateDrawable">@drawable/normal_progressbar</item>
+        <item name="android:maxHeight">2dp</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:isIndicator">false</item>
+        <item name="android:max">100</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="animate_dialog">
+        <item name="android:windowEnterAnimation">@anim/enter_translate_dialog</item>
+        <item name="android:windowExitAnimation">@anim/exit_translate_dialog</item>
+    </style>
+
+    <style name="animate_dialog_scale">
+        <item name="android:windowEnterAnimation">@anim/enter_scale_dialog</item>
+        <item name="android:windowExitAnimation">@anim/exit_scale_dialog</item>
+    </style>
+
+    <style name="KTabRbStyle" >
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/common_tab_text_color_selector</item>
+        <item name="android:background">@drawable/ktab_background_selector</item>
+    </style>
+
+    <style name="KTabMoreStyle" >
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--透明Activity-->
+    <style name="TransparentActivity" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>

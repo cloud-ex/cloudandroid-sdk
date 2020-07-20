@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.sl.ui.library.widget.TitleBarLayout
+        android:id="@+id/title_layout"
+        app:bar_right_text="@string/str_transfer_record"
+        app:bar_right_color="@color/normal_text_color"
+        app:bar_title="@string/str_funds_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--选择币种-->
+    <com.sl.ui.library.widget.CommonItemLayout
+        android:id="@+id/item_coin_layout"
+        android:layout_marginTop="20dp"
+        app:itemRightText="选择币种"
+        app:itemBgColor="@color/bg_card_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="17dp"
+        android:background="@drawable/transfer_warp_bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="114dp">
+
+        <!--左边进度-->
+        <LinearLayout
+            android:id="@+id/ll_left_layout"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="从"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+            <View
+                android:layout_marginTop="4dp"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_transfer_round" />
+            <View
+                android:layout_marginTop="4dp"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_transfer_round" />
+            <View
+                android:layout_marginTop="4dp"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_transfer_round" />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:src="@drawable/icon_transfer_switch"
+            android:id="@+id/iv_switch_transfer"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toLeftOf="@id/iv_switch_transfer"
+            android:layout_toRightOf="@id/ll_left_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_from_account"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/str_wallet_account"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+
+            <View
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                style="@style/common_horizon_line_style"
+                android:layout_height="1dp"/>
+            <TextView
+                android:id="@+id/tv_to_account"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/str_contract_account"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_normal"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:paddingTop="40dp"
+        android:paddingBottom="18dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/transfer_warp_bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sl.ui.library.widget.CommonInputLayout
+            android:id="@+id/item_vol_layout"
+            app:rightText="@string/str_all"
+            app:inputHelperHint="余额:0.0"
+            app:inputHint="@string/str_transfer_vol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.sl.ui.library.widget.CommonlyUsedButton
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/bt_commit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:bgColor="@color/main_yellow"
+        app:bottonTextContent="@string/str_transfer"
+        app:buttonTextColor="@color/text_color"
+        app:normalEnable="false"
+        app:textStyleBold="true" />
+
+</LinearLayout>

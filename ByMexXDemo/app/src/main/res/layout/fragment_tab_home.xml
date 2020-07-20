@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <ImageView
+            android:id="@+id/iv_account"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_account_default" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_account"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Min"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_xl"
+            />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="注册/登录"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title_layout"
+        android:clipToPadding="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--banner-->
+            <com.youth.banner.Banner
+                android:id="@+id/banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:indicator_margin="8dp"
+                app:indicator_normal_color="@color/line_focus_color"
+                app:indicator_selected_color="@color/main_yellow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <!--充值-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_deposit_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_home_deposit" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_deposit"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+                <!--资金划转-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_transfer_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_home_transfer" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_funds_transfer"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+                <!--帮助中心-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_help_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_home_help" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_help"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+                <!--新手指导-->
+                <com.sl.ui.library.widget.material.MaterialLinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/ll_guide_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_home_guide" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_new_guide"
+                        android:textSize="@dimen/font_size_m" />
+                </com.sl.ui.library.widget.material.MaterialLinearLayout>
+
+            </LinearLayout>
+            <!--合约行情-->
+            <fragment
+                android:id="@+id/fragment_market"
+                android:layout_marginTop="24dp"
+                android:name="com.sl.contract.library.fragment.ContractMarketFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--日盈利排行榜-->
+            <fragment
+                android:id="@+id/fragment_rank"
+                android:layout_marginTop="10dp"
+                android:name="com.sl.contract.library.fragment.ContractRankFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

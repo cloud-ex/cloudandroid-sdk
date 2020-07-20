@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/btn_round_bg">
+
+    <View
+        android:id="@+id/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/down_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/btn_touch_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_complainCommand_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="按钮" />
+
+    <ProgressBar
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        tools:visibility="visible"
+        android:layout_toLeftOf="@id/tv_complainCommand_content"
+        android:id="@+id/pb_view"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/item_commonly_bg"
+        android:indeterminateOnly="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

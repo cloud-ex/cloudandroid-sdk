@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.sl.ui.library.widget.RefreshingLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingRight="15dp"
+                android:clipToPadding="false"
+                android:id="@+id/lv_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <com.sl.ui.library.widget.material.MaterialRadioButton
+                android:id="@+id/tab_open_position"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/str_open_position"
+                android:background="@drawable/position_background_selector"
+                android:textColor="@drawable/selector_tab_text_color"
+                android:textSize="@dimen/font_size" />
+
+            <com.sl.ui.library.widget.material.MaterialRadioButton
+                android:id="@+id/tab_close_position"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/tab_open_position"
+                android:background="@drawable/position_background_selector"
+                android:button="@null"
+                android:checked="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/str_close_position"
+                android:textColor="@drawable/selector_tab_text_color"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_kline_pre"
+                android:scaleType="centerInside"
+                android:id="@+id/iv_kline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:scaleType="centerInside"
+                android:layout_toLeftOf="@id/iv_kline"
+                android:src="@drawable/icon_calculator"
+                android:id="@+id/iv_calculator"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_color" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--交易部分-->
+                <include
+                    layout="@layout/sl_include_contract_trade_left_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5" />
+
+                <!--深度-->
+                <include
+                    layout="@layout/sl_include_contract_trade_right_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5" />
+
+            </LinearLayout>
+            <!--普通委托/计划委托切换-->
+            <RelativeLayout
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioGroup
+                    android:id="@+id/rg_entrust_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal">
+
+                    <com.sl.ui.library.widget.material.MaterialRadioButton
+                        android:id="@+id/rb_limit_entrust"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/position_background_selector"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/str_limit_entrust"
+                        android:textColor="@drawable/selector_tab_text_color"
+                        android:textSize="16sp" />
+
+                    <com.sl.ui.library.widget.material.MaterialRadioButton
+                        android:id="@+id/rb_plan_entrust"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/position_background_selector"
+                        android:textColor="@drawable/selector_tab_text_color"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/str_plan_entrust"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/iv_cancel_all"
+                    android:scaleType="centerInside"
+                    android:id="@+id/iv_cancel_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerInside"
+                    android:layout_toLeftOf="@id/iv_cancel_all"
+                    android:src="@drawable/icon_order"
+                    android:id="@+id/iv_all_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/item_fragment_entrust_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="550dp"
+                 />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</com.sl.ui.library.widget.RefreshingLayout>

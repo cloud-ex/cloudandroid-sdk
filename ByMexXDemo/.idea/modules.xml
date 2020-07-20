@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ByMex.iml" filepath="$PROJECT_DIR$/ByMex.iml" group="ByMex" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ByMexXDemo-ByMex.iml" filepath="$PROJECT_DIR$/.idea/modules/ByMexXDemo-ByMex.iml" group="ByMex" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ByMexXDemo-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ByMexXDemo-app.iml" group="ByMex/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contractlibrary/ByMexXDemo-contractlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/contractlibrary/ByMexXDemo-contractlibrary.iml" group="ByMex/contractlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uilibrary/ByMexXDemo-uilibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/uilibrary/ByMexXDemo-uilibrary.iml" group="ByMex/uilibrary" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ByMex/app" />
+      <module fileurl="file://$PROJECT_DIR$/code-ByMex.iml" filepath="$PROJECT_DIR$/code-ByMex.iml" group="ByMex" />
+      <module fileurl="file://$PROJECT_DIR$/contractlibrary/contractlibrary.iml" filepath="$PROJECT_DIR$/contractlibrary/contractlibrary.iml" group="ByMex/contractlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/contractsdkX/contractsdk.iml" filepath="$PROJECT_DIR$/contractsdkX/contractsdk.iml" group="ByMex/contractsdk" />
+      <module fileurl="file://$PROJECT_DIR$/contractsdkX/contractsdkX.iml" filepath="$PROJECT_DIR$/contractsdkX/contractsdkX.iml" group="ByMex/contractsdkX" />
+      <module fileurl="file://$PROJECT_DIR$/uilibrary/uilibrary.iml" filepath="$PROJECT_DIR$/uilibrary/uilibrary.iml" group="ByMex/uilibrary" />
+    </modules>
+  </component>
+</project>
